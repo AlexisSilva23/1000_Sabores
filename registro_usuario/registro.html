@@ -1,11 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="registro.css">
+    <title>registro</title>
 </head>
+
 <body>
-    
+<header></header>
+
+<main>
+    <Section id="Registro">
+        <div class="container">
+            <h2>Forma parte de nuestra pasteleria</h2>
+            <form action="#">
+                <div class="row">
+
+                    <div class="col-6 mt-3">
+                        <div class="registro-input">
+                            <label id="lblNombre">Nombre:</label>
+                            <input id="nombre" class="form-control" type="text" placeholder="Ingrese su Nombre">
+                        </div>
+                    </div>
+
+                    <div class="col-6 mt-3">
+                        <div class="registro-input">
+                            <label id="lblNombre">Apellido:</label>
+                            <input id="apellido" class="form-control" type="text" placeholder="Ingrese su Apellido">
+                        </div>
+                    </div>
+
+                    <div class="col-6 mt-3">
+                        <div class="registro-input">
+                            <label id="lblNombre">Edad:</label>
+                            <input id="edad" class="form-control" type="text" placeholder="Ingrese su Edad">
+                        </div>
+                    </div>
+
+                    <div class="col-6 mt-3">
+                        <div class="registro-input">
+                            <label id="lblNombre">Correo Electronico:</label>
+                            <input id="correo" class="form-control" type="text"
+                                placeholder="Ingrese su Correo Electronico">
+                        </div>
+                    </div>
+
+                    <div class="col-6 mt-3">
+                        <div class="registro-input">
+                            <label id="lblNombre">Contraseña:</label>
+                            <input id="password" class="form-control" type="text" placeholder="Ingrese su Contraseña">
+                        </div>
+                    </div>
+
+                    <div class="col-12 registro-btn">
+                        <button onclick="guardar()" class="btn btn-primary btn-l">Guardar</button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </Section>
+</main>
+
+    <footer></footer>
+
+    <script src="registro.js"></script>
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+
 </body>
+
 </html>
