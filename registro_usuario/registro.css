@@ -1,0 +1,10 @@
+.logo{
+    with: 100px;
+    height: 100px;
+}
+
+.registro-btn{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;    
+}
