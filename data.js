@@ -20,7 +20,7 @@ const productos = [
         nombre : "Torta Redonda de Vainilla",
         precio : 40000,
         imagen : "../img/TT001.png",
-        categoria : "Tortas Redondas"
+        categoria : "Tortas Circulares"
     },
     {
         codigo : "PI001",
@@ -28,5 +28,12 @@ const productos = [
         precio : 5000,
         imagen : "../img/PI001.png",
         categoria : "Postres Individuales"
+    },
+    {
+        codigo : "TT002",
+        nombre : "Torta Circular de Manjar",
+        precio : 42000,
+        imagen : "../img/",
+        categoria : "Postres Circulares"
     }
 ]

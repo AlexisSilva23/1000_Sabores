@@ -9,3 +9,14 @@ h1, h2, h3, h4, h5, .card-title {
     font-weight: bold;
     color: #5D4037;
 }
+
+.logo{
+    width: 75px;
+    height: auto;
+    padding: 5px;
+}
+
+.carrito{
+    width: 25px;
+    height: auto;
+}

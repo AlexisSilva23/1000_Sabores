@@ -48,13 +48,17 @@ p, .card-text {
   padding: 10px;              
 }
 
-/* Para hacer las tarjetas del mismo tamaño */
 .card {
-  height: 100%;               /* Ocupa toda la altura del contenedor */
+  height: 100%;               
   display: flex;
   flex-direction: column;
 }
 
 .card-body {
-  flex-grow: 1;               /* Ocupa el espacio restante */
+  flex-grow: 1;              
+}
+
+.carrito{
+    width: 25px;
+    height: auto;
 }
