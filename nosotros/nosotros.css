@@ -3,11 +3,19 @@
     height: 100px;
 }
 
+.primer_titulo{
+    font-family: 'Pacifico', cursive;
+}
+
 .informacion_empresa{
     max-width: 10000px;
     margin: 40px;
     padding: 20px;
     text-align: center;
+}
+
+.segundo_titulo{
+    font-family: 'Pacifico', cursive;
 }
 
 .datos_empresa{
