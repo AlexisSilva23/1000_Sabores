@@ -10,60 +10,96 @@
 </head>
 
 <body>
-<header></header>
-
-<main>
-    <Section id="Registro">
-        <div class="container">
-            <h2>Forma parte de nuestra pasteleria</h2>
-            <form action="#">
-                <div class="row">
-
-                    <div class="col-6 mt-3">
-                        <div class="registro-input">
-                            <label id="lblNombre">Nombre:</label>
-                            <input id="nombre" class="form-control" type="text" placeholder="Ingrese su Nombre">
-                        </div>
-                    </div>
-
-                    <div class="col-6 mt-3">
-                        <div class="registro-input">
-                            <label id="lblNombre">Apellido:</label>
-                            <input id="apellido" class="form-control" type="text" placeholder="Ingrese su Apellido">
-                        </div>
-                    </div>
-
-                    <div class="col-6 mt-3">
-                        <div class="registro-input">
-                            <label id="lblNombre">Edad:</label>
-                            <input id="edad" class="form-control" type="text" placeholder="Ingrese su Edad">
-                        </div>
-                    </div>
-
-                    <div class="col-6 mt-3">
-                        <div class="registro-input">
-                            <label id="lblNombre">Correo Electronico:</label>
-                            <input id="correo" class="form-control" type="text"
-                                placeholder="Ingrese su Correo Electronico">
-                        </div>
-                    </div>
-
-                    <div class="col-6 mt-3">
-                        <div class="registro-input">
-                            <label id="lblNombre">Contraseña:</label>
-                            <input id="password" class="form-control" type="text" placeholder="Ingrese su Contraseña">
-                        </div>
-                    </div>
-
-                    <div class="col-12 registro-btn">
-                        <button onclick="guardar()" class="btn btn-primary btn-l">Guardar</button>
-                    </div>
-
+    <header>
+        <nav class="navbar navbar-expand-sm miClase">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="../img/logo.png" alt="Mil Sabores" class="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="productos.html">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Buscador" aria-label="Buscar">
+                        <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    </form>
                 </div>
-            </form>
-        </div>
-    </Section>
-</main>
+
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <Section id="Registro">
+            <div class="container">
+                <h2>Se parte de nuestros sabores</h2>
+                <form action="#">
+                    <div class="row">
+
+                        <div class="col-6 mt-3">
+                            <div class="registro-input">
+                                <label id="lblNombre">Nombre:</label>
+                                <input id="nombre" class="form-control" type="text" placeholder="Ingrese su Nombre">
+                            </div>
+                        </div>
+
+                        <div class="col-6 mt-3">
+                            <div class="registro-input">
+                                <label id="lblNombre">Apellido:</label>
+                                <input id="apellido" class="form-control" type="text" placeholder="Ingrese su Apellido">
+                            </div>
+                        </div>
+
+                        <div class="col-6 mt-3">
+                            <div class="registro-input">
+                                <label id="lblNombre">Edad:</label>
+                                <input id="edad" class="form-control" type="text" placeholder="Ingrese su Edad">
+                            </div>
+                        </div>
+
+                        <div class="col-6 mt-3">
+                            <div class="registro-input">
+                                <label id="lblNombre">Correo Electronico:</label>
+                                <input id="correo" class="form-control" type="text"
+                                    placeholder="Ingrese su Correo Electronico">
+                            </div>
+                        </div>
+
+                        <div class="col-6 mt-3">
+                            <div class="registro-input">
+                                <label id="lblNombre">Contraseña:</label>
+                                <input id="password" class="form-control" type="text"
+                                    placeholder="Ingrese su Contraseña">
+                            </div>
+                        </div>
+
+                        <div class="col-12 registro-btn">
+                            <button onclick="guardar()" class="btn btn-primary btn-l">Guardar</button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </Section>
+    </main>
 
     <footer></footer>
 

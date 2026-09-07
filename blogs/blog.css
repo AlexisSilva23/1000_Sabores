@@ -1,0 +1,26 @@
+.logo{
+    with: 100px;
+    height: 100px;
+}
+
+.informacion_empresa{
+    max-width: 10000px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.desarrolladores{
+    max-width: 100000px;
+    margin: 20px;
+    padding: 20px;
+    text-align: left;
+}
+
+.curiosidades_empresa{
+    max-width: 10000px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+}
