@@ -1,4 +1,43 @@
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    color: #5D4037;
+}
+
+h1, h2, h3, h4, h5, .card-title {
+    font-family: 'Pacifico', cursive;
+    font-weight: bold;
+    color: #5D4037;
+}
+
+p, .card-text {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    color: #5D4037;
+}
+
+.card-title{
+    font-size: 28px;;
+}
+
 .logo{
-    with: 100px;
-    height: 100px;
+    width: 75px;
+    height: auto;
+    padding: 5px;
+}
+
+.img-fluid{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    padding: 10px;
+}
+
+.card-body h5 {
+    margin-bottom: 20px;
+}
+
+.card-body p {
+    margin-bottom: 20px;
 }
