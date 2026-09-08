@@ -8,3 +8,20 @@
     justify-content: flex-end;
     margin-top: 20px;    
 }
+
+.carrito{
+  width: 25px;
+  height: auto;
+
+}
+
+.Registro {
+    display: flex; 
+    flex-direction: column; 
+    width: 100%; 
+    margin-bottom: 15px; 
+}
+
+.titulo_pro{
+    font-family: 'Pacifico', cursive;
+}
