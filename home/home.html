@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
     
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="../global.css">
     <link rel="stylesheet" href="./home.css">
@@ -46,7 +47,7 @@
                             <a class="nav-link" href="../contacto/contacto.html">Contacto</a>
                         </li>
                         <a class="nav-link" href="../carrito_compras/carrito.html">
-                            <img src="../img/carrito.png" alt="Carrito" class="carrito">
+                            <i class="bi bi-cart3"></i>
                             Carrito
                             <span class="badge bg-success" id="carrito-contador">0</span>
                         </a>
@@ -87,7 +88,31 @@
     </div>
 
 
-    <footer></footer>
+    <footer id="footer-global">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                <h5>NUESTRAS REDES SOCIALES</h5>
+    
+                <div class="redes-sociales">
+                    <a href="#" target="_blank" title="Instagram"> <i class="bi bi-instagram"></i></a>
+                    <a href="#" target="_blank" title="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#" target="_blank" title="TikTok"><i class="bi bi-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <h5>¿ERES NUEVO?</h5>
+                <p>Registrate o inicia sesión para ver tus pedidos</p>
+                <div class="botones-footer">
+                    <a href="../iniciar_sesion/login.html" class="btn btn-outline-success">Iniciar Sesión</a>
+                    <a href="../registro_usuario/registro.html" class="btn btn-outline-success">Registrarse</a>
+                </div>
+
+            </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="../data.js"></script>
     <script src="../home/home.js"></script>

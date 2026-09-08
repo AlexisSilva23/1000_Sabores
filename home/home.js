@@ -2,7 +2,7 @@ console.log("Holaaa");
 
 const contenedor = document.querySelector("#contenedor-productos-home");
 
-const mostrarProductos = productos.slice(0, 5);  // ← Los 4 primeros
+const mostrarProductos = productos.slice(0, 4);  // ← Los 4 primeros
 
 mostrarProductos.forEach(function(producto) {
   const tarjeta = `
