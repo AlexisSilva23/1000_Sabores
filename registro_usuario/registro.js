@@ -11,6 +11,10 @@ function guardar(){
     console.log (correo);
     var password = document.getElementById("password").value;
     console.log (password);
+    var region = document.getElementById("region").value;
+    console.log (region);
+    var comuna = document.getElementById("region").value;
+    console.log (comuna);
 
     if(nombre == "") {
         alert("El Nombre no puede estar vacio");
@@ -27,6 +31,12 @@ function guardar(){
     }else if(password == ""){
         alert("La contraseña no puede estar vacia");
         return;
+    }else if(region == ""){
+        alert("La region no puede estar vacia");
+        return;
+    }else if(comuna == ""){
+        alert("La comuna no puede estar vacia");
+        return;
     }
 
     var objeto_user = [
@@ -35,7 +45,9 @@ function guardar(){
             "apellido": apellido,
             "edad": edad,
             "correo": correo,
-            "contraseña": password
+            "contraseña": password,
+            "region": region,
+            "comuna": comuna
         }
     ];
 

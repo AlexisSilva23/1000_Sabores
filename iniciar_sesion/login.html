@@ -1,102 +1,93 @@
 <!DOCTYPE html>
-  <html lang="en">
+<html lang="en">
 
-  <head>
+<head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="login.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="login.css">
+  <title>Document</title>
 
-  </head>
+</head>
 
 
-  <body>
+<body>
 
-    
+
 
   <header>
-
-    <nav class="navbar navbar-expand-sm miClase">
-     <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="../img/logo.png" alt="Mil Sabores" class="logo"></a>
-       <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-          aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-
-         </button>
-
-        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" href="../home/home.html">Home</a>
-           </li>
-
-     <li class="nav-item">
-     <a class="nav-link" href="../productos/productos.html">Productos</a>
-
-    </li>
-       <li class="nav-item">
-         <a class="nav-link" href="../nosotros/nosotros.html">Nosotros</a>
-         </li>
-
-          <li class="nav-item">
-          <a class="nav-link" href="../blogs/blog.html">Blog</a>
-       </li>
-         <li class="nav-item">
-         <a class="nav-link" href="../contacto/contacto.html">Contacto</a>
-
-    </li>
-
-   <li class="nav-item">
-       <a class="nav-link" href="../carrito_compras/carrito.html"><img src="../img/carrito.png" alt="Carrito"
-        class="carrito">Carrito</a>
-
-    </li>
-
-   </ul>
-
-    
-            
-      <form class="d-flex">
-       <input class="form-control me-2" type="search" placeholder="Buscador" aria-label="Buscar">
-         <button class="btn btn-outline-success" type="submit">Buscar</button>
-       </form>
-       </div>
-
-
-      </div>  
-      </nav>
-
+        <nav class="navbar navbar-expand-sm miClase">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="../img/logo.png" alt="Mil Sabores" class="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../home/home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../productos/productos.html">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../nosotros/nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../blogs/blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../contacto/contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../carrito_compras/carrito.html"><img src="../img/carrito.png"
+                                    alt="Carrito" class="carrito">Carrito</a>
+                        </li>
+                        <li class="nav-item ms-3">
+                            <a class="nav-link fw-bold text-dark" href="../iniciar_sesion/login.html">Iniciar Sesión</a>
+                        </li>
+                        <li class="nav-item d-none d-sm-block">
+                            <span class="nav-link text-muted">|</span>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold text-dark"
+                                href="../registro_usuario/registro.html">Registrarse</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
 
-<div class="container mt-4 mb-5">
-  <div class="row justify-content-center">
-    <div class="col-md-8">
-      <div class="card shadow-sm">
-        <div class="card-body p-4">
-        <img src="../img/logo.png" alt="Logo" class="logo_img">
-        <h2 class="Titulo_formulario text-center mb-4">PASTELERIA MIL SABORES</h2>
-          <form>
-   <div class="mb-3">
-    <label for="nombreUsuario" class="form_label">Nombre completo</label>
-    <input type="text" class="form-control" id="nombreUsuario" placeholder="Ej: Juan Pérez" required>
-    </div>
-   <div class="mb-3">
-     <label for="emailUsuario" class="form-label">Correo electronico</label>
-      <input type="email" class="form-control" id="emailUsuario" placeholder="nombre@ejemplo.com" required>
-     <br>
-       <div class="d-grid">
-       <button class="btn btn-dark btn-lg" type="submit">INICIAR SESSION</button>
-       </div>
-          </form>
+  <div class="container mt-4 mb-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card shadow-sm">
+          <div class="card-body p-4">
+            <img src="../img/logo.png" alt="Logo" class="logo_img">
+            <h2 class="Titulo_formulario text-center mb-4">PASTELERIA MIL SABORES</h2>
+            <form>
+              <div class="mb-3">
+                <label for="nombreUsuario" class="form_label">Nombre completo</label>
+                <input type="text" class="form-control" id="nombreUsuario" placeholder="Ej: Pedrito Montana" required>
+              </div>
+              <div class="mb-3">
+                <label for="emailUsuario" class="form-label">Correo electronico</label>
+                <input type="email" class="form-control" id="emailUsuario" placeholder="nombre@ejemplo.com" required>
+                <br>
+                <div class="d-grid">
+                  <button class="btn btn-dark btn-lg" type="submit">INICIAR SESION</button>
+                </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-  </body>
-  </html>
+</body>
+
+</html>
