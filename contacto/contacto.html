@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
     <title>Document</title>
 </head>
+
 <body>
     <header>
         <nav class="navbar navbar-expand-sm miClase">
@@ -58,9 +60,55 @@
         </nav>
     </header>
 
+    <main class="container mt-5 mb-5">
+
+        <div class="text-center mb-4">
+            <img src="../img/logo.png" alt="Mil Sabores" style="max-width: 120px;" class="mb-3">
+            <h2 class="fw-bold">PASTELERÍA MIL SABORES</h2>
+        </div>
+
+        <div class="container mt-5 mb-5">
+            <div class="card shadow-sm w-100">
+                <div class="card-body p-4 p-md-5">
+                    <h2>CONTACTANOS</h2>
+                    <form>
+                        <div class="row">
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label fw-semibold">NOMBRE COMPLETO</label>
+                                <!-- Se agrega maxlength="100" para cumplir la regla de negocio -->
+                                <input type="text" id="nombre" class="form-control" maxlength="100" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="correo" class="form-label fw-semibold">CORREO</label>
+                                <input type="email" id="correo" class="form-control" maxlength="100" required>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="mensaje" class="form-label fw-semibold">MENSAJE</label>
+                                <!-- Se agrega maxlength="500" y rows="4" para hacer la caja más grande -->
+                                <textarea id="mensaje" class="form-control" rows="4" maxlength="500"
+                                    required></textarea>
+                            </div>
+
+                            <!-- Botón centrado -->
+                            <div class="text-center">
+                                <button type="button" class="btn btn-dark px-5 py-2">ENVIAR MENSAJE</button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
     <footer></footer>
 
     <script src="contacto.js"></script>
     <script src="/bootstrap/bootstrap.min.css"></script>
 </body>
+
 </html>

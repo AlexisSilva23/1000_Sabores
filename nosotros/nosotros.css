@@ -10,6 +10,7 @@
 .informacion_empresa{
     max-width: 10000px;
     margin: 40px;
+    background-color: #f8f9fa; 
     padding: 20px;
     text-align: center;
 }
@@ -21,6 +22,7 @@
 .datos_empresa{
     max-width: 10000px;
     margin: 40px;
+    background-color: #f8f9fa; 
     padding: 20px;
     text-align: center;
 }
@@ -28,6 +30,7 @@
 .equipo_desarrolladores{
     max-width: 800px;
     margin: 40px;
+    background-color: #f8f9fa; 
     padding: 20px;
     text-align: left;
 }

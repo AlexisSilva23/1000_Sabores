@@ -1,26 +1,25 @@
-.logo{
+.logo {
     with: 100px;
     height: 100px;
 }
 
-.informacion_empresa{
-    max-width: 10000px;
-    margin: 20px;
-    padding: 20px;
-    text-align: center;
+.noticia-tarjeta {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    background-color: #f8f9fa; 
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 8px; 
 }
 
-
-.desarrolladores{
-    max-width: 100000px;
-    margin: 20px;
-    padding: 20px;
-    text-align: left;
+.noticia-texto {
+    width: 65%; 
 }
 
-.curiosidades_empresa{
-    max-width: 10000px;
-    margin: 20px;
-    padding: 20px;
-    text-align: center;
+.img_torta {
+    width: 30%; 
+    height: auto;
+    border-radius: 8px; 
+    object-fit: cover;
 }

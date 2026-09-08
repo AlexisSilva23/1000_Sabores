@@ -14,58 +14,78 @@
 <body>
 
     <header>
-    <nav class="navbar navbar-expand-sm miClase">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="../img/logo.png" alt="Mil Sabores" class="logo"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                <ul class="navbar-nav align-items-center">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="../home/home.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../productos/productos.html">Productos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../nosotros/nosotros.html">Nosotros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../blogs/blog.html">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../contacto/contacto.html">Contacto</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../carrito_compras/carrito.html">
-                            <img src="../img/carrito.png" alt="Carrito" class="carrito">
-                            Carrito
-                            <span class="badge bg-success" id="carrito-contador">0</span>
-                        </a>
-                    </li>
-                    <li class="nav-item ms-3">
-                        <a class="nav-link fw-bold text-dark" href="../iniciar_sesion/login.html">Iniciar Sesión</a>
-                    </li>
-                    <li class="nav-item d-none d-sm-block">
-                        <span class="nav-link text-muted">|</span>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-bold text-dark" href="../registro_usuario/registro.html">Registrarse</a>
-                    </li>
-                </ul>
+        <nav class="navbar navbar-expand-sm miClase">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="../img/logo.png" alt="Mil Sabores" class="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../home/home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../productos/productos.html">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../nosotros/nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../blogs/blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../contacto/contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../carrito_compras/carrito.html">
+                                <img src="../img/carrito.png" alt="Carrito" class="carrito">
+                                Carrito
+                                <span class="badge bg-success" id="carrito-contador">0</span>
+                            </a>
+                        </li>
+                        <li class="nav-item ms-3">
+                            <a class="nav-link fw-bold text-dark" href="../iniciar_sesion/login.html">Iniciar Sesión</a>
+                        </li>
+                        <li class="nav-item d-none d-sm-block">
+                            <span class="nav-link text-muted">|</span>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold text-dark"
+                                href="../registro_usuario/registro.html">Registrarse</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-</header>
+        </nav>
+    </header>
 
 
-    <main>
-        
+    <main class="container mt-5">
+        <section class="noticia-tarjeta">
+            <div class="noticia-texto">
+                <h2>Caso Curioso #1</h2>
+                <p>Descubre el como logramos participar en el Record Guinness en 1995 por la torta mas grande del mundo,
+                    cosa que hizo que nuestra pasteleria sea marcada en las historia como algo increible.</p>
+                <br>
+                <button class="btn btn-dark btn-l">Ver Caso</button>
+            </div>
+            <img src="../img/TT001.png" alt="Torta Récord Guinness" class="img_torta">
+        </section>
+
+        <section class="noticia-tarjeta">
+            <div class="noticia-texto">
+                <h2>Caso Curioso #2</h2>
+                <p>Conoce el origen secreto de nuestra famosa torta de chocolate y por qué nuestros clientes la siguen
+                    eligiendo 50 años despues.</p>
+                <br>
+                <button class="btn btn-dark btn-l">Ver Caso</button>
+            </div>
+            <img src="../img/TC001.png" alt="Torta Récord Guinness" class="img_torta">
+        </section>
     </main>
-
 
     <footer></footer>
 
