@@ -61,4 +61,11 @@ p, .card-text {
 .carrito{
     width: 25px;
     height: auto;
+    padding-right: 5px;
+}
+
+.carrito-contador {
+  font-size: 12px;
+  padding: 4px 8px;
+  margin-left: 5px;
 }
