@@ -35,15 +35,15 @@ h1, h2, h3, h4, h5, .card-title {
   color: var(--color-chocolate);
 }
 
-.btn-outline-success:hover {
+.btn-outline-success:hover { 
   background-color: var(--color-chocolate);
   border-color: var(--color-chocolate);
   color: white;
 }
 
 .navbar {
-  background-color: #F5E6D3;  /* Crema más intenso que #FFF5E1 */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);  /* Sombra suave */
+  background-color: #F5E6D3;  
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
   border-bottom: 2px solid var(--color-rosa);
 }
 
@@ -109,13 +109,11 @@ h1, h2, h3, h4, h5, .card-title {
 .redes-sociales a {
   color: var(--color-chocolate);
   font-size: 28px;
-  transition: 0.3s;
   text-decoration: none;
 }
 
 .redes-sociales a:hover {
   color: var(--color-rosa);
-  transform: scale(1.2);
 }
 
 .footer-right p {
