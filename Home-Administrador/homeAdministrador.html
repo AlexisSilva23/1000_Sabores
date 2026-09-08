@@ -12,20 +12,21 @@
 <body>  
 
 
-   <div class="container-fluid min-vh-100 marco_principal">
-  <div class="row min-vh-100">
-    <div class="col-md-3 col-lg-2 linea-vertical-menu bg-white p-3 d-flex flex-column justify-content-between">
+ <div class="container-fluid min-vh-100 marco_principal p-0">
+  <div class="row no-gutters min-vh-100">
+
+    <!-- Menú Lateral Izquierdo -->
+    <div class="col-md-3 col-lg-2 linea_vertical_menu bg-white p-3 d-flex flex-column justify-content-between">
       <div>
-        <div class="h5 font-weight-bold">Company</div>
-        
+        <div class="h5 font-weight-bold">Mil Sabores</div>
         <hr class="linea-menu">
         <div class="nav flex-column nav-pills">
           <a class="nav-link active" href="#">Dashboard</a>
-          <a class="nav-link text-dark" href="#">Orders</a>
+          <a class="nav-link text-dark" href="../adminUsuarios/adminUsuarios.html">Pedidos</a>
           <a class="nav-link text-dark" href="#">Inventario</a>
-          <a class="nav-link text-dark" href="#">Reports</a>
-          <a class="nav-link text-dark" href="#">Employees</a>
-          <a class="nav-link text-dark" href="#">Customers</a>
+          <a class="nav-link text-dark" href="#">Reportes</a>
+          <a class="nav-link text-dark" href="#">Empleados</a>
+          <a class="nav-link text-dark" href="#">Clientes</a>
         </div>
       </div>
 
@@ -37,34 +38,30 @@
           <a class="nav-link text-dark py-1" href="#">Search</a>
           <a class="nav-link text-dark py-1" href="#">Ayuda</a>
         </div>
-
         <hr class="linea-menu">
-
-        <div class="font-weight-bold small text-dark pl-2">Perfil
-        </div>
+        <div class="font-weight-bold small text-dark pl-2">Perfil</div>
       </div>
-    </div>
+    </div> <!-- Cierre de la columna del menú -->
 
-    <div class="col-md-9 col-lg-10 p-0 d-flex flex-column">
+    <!-- Panel Derecho de Contenido -->
+    <div class="col-md-9 col-lg-10 d-flex flex-column p-0 bg-light">
 
-      <div class="card border-0 rounded-0 flex-fill linea-horizontal-panel bg-transparent">
-        <div class="card-header bg-transparent border-0 d-flex justify-content-between align-items-center pt-4 px-4">
+      <!-- Encabezado Superior -->
+      <div class="card border-0 llinea_horizontal_panel rounded-0 flex-fill bg-transparent p-4">
+        <div class="d-flex justify-content-between align-items-center Titulo_Administrador">
           <h1 class="h3 font-weight-bold mb-0">¡HOLA ADMINISTRADOR!</h1>
-          <span class="h5 mb-0">🔔</span>
-        </div>
-        <div class="card-body">
+          <span class="h4 mb-0">🔔</span>
         </div>
       </div>
-      <div class="card border-0 rounded-0 flex-fill bg-transparent">
-        <div class="card-body">
-        </div>
+
+      <!-- Área Inferior para Tabla / Mantenedor -->
+      <div class="card border-0 rounded-0 flex-fill bg-transparent p-4">
+        <!-- Aquí va la tabla de usuarios -->
       </div>
 
     </div>
 
   </div>
 </div>
-
-
 
 </html>
