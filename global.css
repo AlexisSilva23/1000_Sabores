@@ -1,22 +1,42 @@
-body {
-    font-family: 'Lato', sans-serif;
-    font-size: 16px;
-    color: #5D4037;
+:root {
+  --color-crema: #FFF5E1;
+  --color-rosa: #FFC0CB;
+  --color-chocolate: #8B4513;
+  --color-marron-oscuro: #5D4037;
+  --color-gris-claro: #B0BEC5;
+}
+
+html, body {
+  background-color: var(--color-crema);
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  color: var(--color-marron-oscuro);
 }
 
 h1, h2, h3, h4, h5, .card-title {
-    font-family: 'Pacifico', cursive;
-    font-weight: bold;
-    color: #5D4037;
+  font-family: 'Pacifico', cursive;
+  font-weight: bold;
+  color: var(--color-marron-oscuro);
 }
 
-.logo{
-    width: 75px;
-    height: auto;
-    padding: 5px;
+.logo {
+  width: 75px;
+  height: auto;
+  padding: 5px;
 }
 
-.carrito{
-    width: 25px;
-    height: auto;
+.carrito {
+  width: 25px;
+  height: auto;
+}
+
+.btn-outline-success {
+  border-color: var(--color-chocolate);
+  color: var(--color-chocolate);
+}
+
+.btn-outline-success:hover {
+  background-color: var(--color-chocolate);
+  border-color: var(--color-chocolate);
+  color: white;
 }
