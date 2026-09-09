@@ -1,68 +1,84 @@
 document.addEventListener('DOMContentLoaded', () => {
+    console.log("detalle productos cargado");
     
     const urlParams = new URLSearchParams(window.location.search);
     const codigoProducto = urlParams.get('codigo');
     
+    console.log('Código recibido:', codigoProducto);
+    console.log('URL completa:', window.location.href);
+    
+    if (typeof productos === 'undefined') {
+        console.error('ERROR: stock.js no está cargado');
+        mostrarError('Error: No se pudo cargar el catálogo de productos.');
+        return;
+    }
+    
+    console.log(`Total de productos en stock: ${productos.length}`);
+    
     if (!codigoProducto) {
-        window.location.href = '../productos/productos.html';
+        console.warn('No se encontró código en la URL');
+        mostrarError('No se especificó ningún producto.');
         return;
     }
     
     const producto = productos.find(p => p.codigo === codigoProducto);
     
+    console.log('Producto encontrado:', producto);
+    
     if (!producto) {
-        document.querySelector('main').innerHTML = `
-            <div class="container text-center py-5">
-                <h2 class="text-danger">Producto no encontrado</h2>
-                <p>El producto que buscas no existe o ha sido eliminado.</p>
-                <a href="../productos/productos.html" class="btn btn-chocolate">Volver a Productos</a>
-            </div>
-        `;
+        console.error(`Producto con código "${codigoProducto}" no encontrado`);
+        mostrarError(`Producto "${codigoProducto}" no encontrado.`);
         return;
     }
     
+    console.log(`Mostrando producto: ${producto.nombre}`);
     actualizarDetalle(producto);
     
     configurarEventos(producto);
 });
 
+function mostrarError(mensaje) {
+    const main = document.querySelector('main');
+    if (main) {
+        main.innerHTML = `
+            <div class="container text-center py-5">
+                <div class="alert alert-danger">
+                    <h4><i class="bi bi-exclamation-triangle"></i> Producto no encontrado</h4>
+                    <p>${mensaje}</p>
+                    <p class="text-muted small">Código: ${new URLSearchParams(window.location.search).get('codigo') || 'No especificado'}</p>
+                    <a href="../productos/productos.html" class="btn btn-chocolate mt-3">
+                        <i class="bi bi-arrow-left"></i> Volver a Productos
+                    </a>
+                </div>
+            </div>
+        `;
+    }
+}
+
 function actualizarDetalle(producto) {
+    console.log('Actualizando vista con:', producto);
     
+    // Actualizar imagen
     const imagen = document.querySelector('#detalle-imagen');
     if (imagen) {
         imagen.src = producto.imagen || '../img/placeholder.png';
         imagen.alt = producto.nombre;
     }
     
-    // Actualizar título
     const nombre = document.querySelector('#detalle-nombre');
-    if (nombre) {
-        nombre.textContent = producto.nombre;
-    }
+    if (nombre) nombre.textContent = producto.nombre;
     
-    // Actualizar precio
     const precio = document.querySelector('#detalle-precio');
-    if (precio) {
-        precio.textContent = `$${producto.precio.toLocaleString('es-CL')}`;
-    }
+    if (precio) precio.textContent = `$${producto.precio.toLocaleString('es-CL')}`;
     
-    // Actualizar descripción
     const descripcion = document.querySelector('#detalle-descripcion');
-    if (descripcion) {
-        descripcion.textContent = producto.descripcion || 'Sin descripción disponible.';
-    }
+    if (descripcion) descripcion.textContent = producto.descripcion || 'Sin descripción disponible.';
     
-    // Actualizar categoría (en breadcrumb y tag)
     const categoriaTag = document.querySelector('#detalle-categoria-tag');
     const categoriaBreadcrumb = document.querySelector('#detalle-categoria');
-    if (categoriaTag) {
-        categoriaTag.textContent = producto.categoria;
-    }
-    if (categoriaBreadcrumb) {
-        categoriaBreadcrumb.textContent = producto.categoria;
-    }
+    if (categoriaTag) categoriaTag.textContent = producto.categoria;
+    if (categoriaBreadcrumb) categoriaBreadcrumb.textContent = producto.categoria;
     
-    // Actualizar stock
     const stockElement = document.querySelector('#detalle-stock');
     if (stockElement) {
         if (producto.stock <= 0) {
@@ -77,7 +93,6 @@ function actualizarDetalle(producto) {
         }
     }
     
-    // Configurar el input de cantidad según el stock
     const cantidadInput = document.querySelector('#cantidad-input');
     if (cantidadInput) {
         cantidadInput.max = producto.stock || 99;
@@ -90,7 +105,6 @@ function actualizarDetalle(producto) {
         }
     }
     
-    // Deshabilitar el botón de añadir si no hay stock
     const btnAgregar = document.querySelector('#btn-agregar-carrito');
     if (btnAgregar) {
         if (producto.stock <= 0) {
@@ -106,7 +120,8 @@ function actualizarDetalle(producto) {
 }
 
 function configurarEventos(producto) {
-    // Botones de cantidad
+    console.log('Configurando eventos...');
+    
     const btnMenos = document.querySelector('#btn-cantidad-menos');
     const btnMas = document.querySelector('#btn-cantidad-mas');
     const cantidadInput = document.querySelector('#cantidad-input');
@@ -126,11 +141,12 @@ function configurarEventos(producto) {
             const max = parseInt(cantidadInput.max) || 99;
             if (valor < max) {
                 cantidadInput.value = valor + 1;
+            } else {
+                mostrarMensaje(`Solo tenemos ${max} unidades disponibles`, 'warning');
             }
         });
     }
     
-    // Validar que la cantidad no sea menor a 1 ni mayor al stock
     if (cantidadInput) {
         cantidadInput.addEventListener('change', () => {
             let valor = parseInt(cantidadInput.value) || 1;
@@ -144,27 +160,36 @@ function configurarEventos(producto) {
         });
     }
     
-    // Botón "Añadir al carrito"
     const btnAgregar = document.querySelector('#btn-agregar-carrito');
     if (btnAgregar && producto.stock > 0) {
-        btnAgregar.addEventListener('click', () => {
-            const cantidad = parseInt(cantidadInput.value) || 1;
+        // Eliminar eventos anteriores (por si acaso)
+        btnAgregar.replaceWith(btnAgregar.cloneNode(true));
+        const nuevoBtn = document.querySelector('#btn-agregar-carrito');
+        
+        nuevoBtn.addEventListener('click', () => {
+            console.log('🛒 Click en "Añadir al Carrito"');
             
-            // Intentar añadir al carrito
+            const cantidad = parseInt(cantidadInput.value) || 1;
+            console.log(`📦 Cantidad seleccionada: ${cantidad}`);
+            
+            if (typeof agregarAlCarrito === 'undefined') {
+                console.error('ERROR: carrito_utils.js no está cargado');
+                mostrarMensaje('Error: No se pudo cargar el carrito.', 'danger');
+                return;
+            }
+            
             const exito = agregarAlCarrito(producto.codigo, cantidad);
+            console.log(`✅ Resultado: ${exito ? 'Éxito' : 'Fallo'}`);
             
             if (exito) {
-                // Mostrar mensaje de éxito
-                mostrarMensaje(
-                    `${cantidad} ${cantidad === 1 ? 'unidad' : 'unidades'} de "${producto.nombre}" añadida${cantidad === 1 ? '' : 's'} al carrito`,
-                    'success'
-                );
+                const mensaje = `${cantidad} ${cantidad === 1 ? 'unidad' : 'unidades'} de "${producto.nombre}" añadida${cantidad === 1 ? '' : 's'} al carrito`;
+                mostrarMensaje(mensaje, 'success');
                 
-                // Actualizar badge en el navbar (ya lo hace la función agregarAlCarrito)
-                actualizarBadgeCarrito();
+                if (typeof actualizarBadgeCarrito !== 'undefined') {
+                    actualizarBadgeCarrito();
+                }
             } else {
-                // Verificar si es por falta de stock
-                const carrito = obtenerCarrito();
+                const carrito = typeof obtenerCarrito !== 'undefined' ? obtenerCarrito() : [];
                 const itemEnCarrito = carrito.find(item => item.codigo === producto.codigo);
                 const cantidadEnCarrito = itemEnCarrito ? itemEnCarrito.cantidad : 0;
                 
@@ -185,26 +210,40 @@ function configurarEventos(producto) {
 }
 
 function mostrarMensaje(texto, tipo = 'success') {
-    const mensajeContainer = document.querySelector('#mensaje-carrito');
-    const mensajeTexto = document.querySelector('#mensaje-texto');
+    console.log(`Mensaje (${tipo}): ${texto}`);
     
-    if (mensajeContainer && mensajeTexto) {
-        // Actualizar el mensaje
-        mensajeTexto.textContent = texto;
+    let mensajeContainer = document.querySelector('#mensaje-carrito');
+    
+    if (!mensajeContainer) {
+        const main = document.querySelector('main');
+        if (!main) return;
         
-        // Cambiar el estilo según el tipo
-        const alert = mensajeContainer.querySelector('.alert');
-        if (alert) {
-            alert.className = `alert alert-${tipo} alert-dismissible fade show`;
-        }
-        
-        // Mostrar el mensaje
-        mensajeContainer.style.display = 'block';
-        
-        // Auto-ocultar después de 5 segundos
-        clearTimeout(mensajeContainer.timeout);
-        mensajeContainer.timeout = setTimeout(() => {
-            mensajeContainer.style.display = 'none';
-        }, 5000);
+        mensajeContainer = document.createElement('div');
+        mensajeContainer.id = 'mensaje-carrito';
+        mensajeContainer.className = 'container mt-3';
+        mensajeContainer.style.position = 'fixed';
+        mensajeContainer.style.top = '100px';
+        mensajeContainer.style.right = '20px';
+        mensajeContainer.style.zIndex = '9999';
+        mensajeContainer.style.maxWidth = '400px';
+        document.body.appendChild(mensajeContainer);
     }
+    
+    const alerta = document.createElement('div');
+    alerta.className = `alert alert-${tipo} alert-dismissible fade show shadow`;
+    alerta.innerHTML = `
+        <i class="bi bi-${tipo === 'success' ? 'check-circle-fill' : tipo === 'danger' ? 'exclamation-triangle-fill' : 'info-circle-fill'} me-2"></i>
+        ${texto}
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    `;
+    
+    mensajeContainer.innerHTML = '';
+    mensajeContainer.appendChild(alerta);
+    
+    setTimeout(() => {
+        if (alerta.parentNode) {
+            alerta.remove();
+        }
+    }, 4000);
 }
+

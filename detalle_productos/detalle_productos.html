@@ -44,11 +44,7 @@
                             <a class="nav-link" href="../contacto/contacto.html">Contacto</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../carrito_compras/carrito.html">
-                                <i class="bi bi-cart3"></i>
-                                Carrito
-                                <span class="badge bg-success" id="carrito-contador">0</span>
-                            </a>
+                            <a class="nav-link" href="../carrito_compras/carrito.html"><i class="bi bi-cart3"></i>Carrito</a>
                         </li>
                         <li class="nav-item ms-3">
                             <a class="nav-link fw-bold text-dark" href="../iniciar_sesion/login.html">Iniciar Sesión</a>
@@ -68,14 +64,10 @@
 
     <main class="container my-5">
         <div class="row">
-  <main class="container my-5">
-        <div class="row">
-            <!-- Columna de la Imagen -->
             <div class="col-md-6">
                 <img id="detalle-imagen" src="" alt="Producto" class="img-fluid rounded shadow">
             </div>
             
-            <!-- Columna de la Información -->
             <div class="col-md-6">
                 
                 <h1 id="detalle-nombre" class="display-5 fw-bold text-chocolate">Nombre del Producto</h1>
@@ -102,9 +94,7 @@
                 
                 <div class="d-flex gap-3 align-items-center">
                     <div class="input-group" style="width: 150px;">
-                        <button class="btn btn-outline-secondary" id="btn-cantidad-menos" type="button">-</button>
                         <input type="number" id="cantidad-input" class="form-control text-center" value="1" min="1" max="99">
-                        <button class="btn btn-outline-secondary" id="btn-cantidad-mas" type="button">+</button>
                     </div>
                     <button id="btn-agregar-carrito" class="btn btn-chocolate btn-lg flex-grow-1">
                         <i class="bi bi-cart-plus"></i> Añadir al Carrito
@@ -122,10 +112,10 @@
                 <hr class="my-4">
                 
                 <div class="d-flex gap-3">
-                    <a href="../productos/productos.html" class="btn btn-outline-chocolate">
+                    <a href="../productos/productos.html" class="btn btn-outline-success">
                         <i class="bi bi-arrow-left"></i> Volver a Productos
                     </a>
-                    <a href="../carrito_compras/carrito.html" class="btn btn-outline-chocolate">
+                    <a href="../carrito_compras/carrito.html" class="btn btn-outline-success">
                         <i class="bi bi-cart3"></i> Ver Carrito
                     </a>
                 </div>
@@ -160,6 +150,7 @@
     </footer>
 
     <script src="../stock.js"></script>
+    <script src="../carrito_compras/carritoUtills.js"></script>
     <script src="../detalle_productos/detalle_productos.js"></script>
     <script src="../bootstrap/bootstrap.bundle.min.js"></script>
 </body>

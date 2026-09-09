@@ -1,3 +1,5 @@
+console.log("Contactos");
+
 const KEY_STORAGE_CONTACTO = "contacto_storage";
 
 function enviarMensaje() {
