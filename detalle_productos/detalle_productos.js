@@ -58,7 +58,6 @@ function mostrarError(mensaje) {
 function actualizarDetalle(producto) {
     console.log('Actualizando vista con:', producto);
     
-    // Actualizar imagen
     const imagen = document.querySelector('#detalle-imagen');
     if (imagen) {
         imagen.src = producto.imagen || '../img/placeholder.png';
@@ -120,32 +119,9 @@ function actualizarDetalle(producto) {
 }
 
 function configurarEventos(producto) {
-    console.log('Configurando eventos...');
+    console.log('Configuracion de eventos');
     
-    const btnMenos = document.querySelector('#btn-cantidad-menos');
-    const btnMas = document.querySelector('#btn-cantidad-mas');
     const cantidadInput = document.querySelector('#cantidad-input');
-    
-    if (btnMenos && cantidadInput) {
-        btnMenos.addEventListener('click', () => {
-            let valor = parseInt(cantidadInput.value) || 1;
-            if (valor > 1) {
-                cantidadInput.value = valor - 1;
-            }
-        });
-    }
-    
-    if (btnMas && cantidadInput) {
-        btnMas.addEventListener('click', () => {
-            let valor = parseInt(cantidadInput.value) || 1;
-            const max = parseInt(cantidadInput.max) || 99;
-            if (valor < max) {
-                cantidadInput.value = valor + 1;
-            } else {
-                mostrarMensaje(`Solo tenemos ${max} unidades disponibles`, 'warning');
-            }
-        });
-    }
     
     if (cantidadInput) {
         cantidadInput.addEventListener('change', () => {
@@ -162,15 +138,14 @@ function configurarEventos(producto) {
     
     const btnAgregar = document.querySelector('#btn-agregar-carrito');
     if (btnAgregar && producto.stock > 0) {
-        // Eliminar eventos anteriores (por si acaso)
         btnAgregar.replaceWith(btnAgregar.cloneNode(true));
         const nuevoBtn = document.querySelector('#btn-agregar-carrito');
         
         nuevoBtn.addEventListener('click', () => {
-            console.log('🛒 Click en "Añadir al Carrito"');
+            console.log('Click en "Añadir al Carrito"');
             
             const cantidad = parseInt(cantidadInput.value) || 1;
-            console.log(`📦 Cantidad seleccionada: ${cantidad}`);
+            console.log(`Cantidad seleccionada: ${cantidad}`);
             
             if (typeof agregarAlCarrito === 'undefined') {
                 console.error('ERROR: carrito_utils.js no está cargado');
@@ -179,7 +154,7 @@ function configurarEventos(producto) {
             }
             
             const exito = agregarAlCarrito(producto.codigo, cantidad);
-            console.log(`✅ Resultado: ${exito ? 'Éxito' : 'Fallo'}`);
+            console.log(`Resultado: ${exito ? 'Éxito' : 'Fallo'}`);
             
             if (exito) {
                 const mensaje = `${cantidad} ${cantidad === 1 ? 'unidad' : 'unidades'} de "${producto.nombre}" añadida${cantidad === 1 ? '' : 's'} al carrito`;

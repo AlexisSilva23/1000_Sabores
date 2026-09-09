@@ -37,7 +37,6 @@ function renderizarCarrito() {
         if (carritoVacio) carritoVacio.style.display = 'block';
         if (carritoContenido) carritoContenido.style.display = 'none';
         if (resumen) resumen.innerHTML = '';
-        // Actualizar badge
         actualizarBadgeCarrito();
         return;
     }
@@ -197,7 +196,6 @@ function modificarCantidad(codigo, cambio) {
     const nuevaCantidad = item.cantidad + cambio;
     
     if (nuevaCantidad < 1) {
-        // Si es 0, eliminar el producto
         eliminarDelCarrito(codigo);
         renderizarCarrito();
         mostrarMensaje('Producto eliminado del carrito', 'warning');
