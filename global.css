@@ -60,7 +60,7 @@ h1, h2, h3, h4, h5, .card-title {
 .nav-link {
   color: var(--color-chocolate) !important;
   font-weight: 500;
-  transition: 0.3s;  /* Transición suave al hover */
+  transition: 0.3s;  
 }
 
 .nav-link:hover {
