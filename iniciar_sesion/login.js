@@ -1,34 +1,31 @@
-const KEY_STORAGE = "contacto_storage";
+const KEY_STORAGE = "login_storage";
 
-function guardar() {
-    var nombre = document.getElementById("nombreUsuario").value;
-    console.log(nombre);
-    var correo = document.getElementById("emailUsuario").value;
+function login() {
+    var correo = document.getElementById("correo").value;
     console.log(correo);
-    var mensaje = document.getElementById("mensajeUsuario").value;
-    console.log(mensaje);
+    var password = document.getElementById("password").value;
+    console.log(password);
 
-if(nombre == "") {
-        alert("Falta ingresar el nombre");
+
+    if(correo == ""){
+        alert("El Correo no puede estar vacio");
         return;
-    } else if(correo == "") {
-        alert("Falta ingresar el correo");
-        return;
-    } else if(mensaje == "") {
-        alert("Falta ingresar el mensaje");
+    } else if(password == ""){
+        alert("La contraseña no puede estar vacia");
         return;
     }
 
-    var objeto_contacto = [
+    var objeto_login = [
         {
-            "nombre": nombre,
             "correo": correo,
-            "mensaje": mensaje
+            "password": password
         }
     ];
-    localStorage.setItem(KEY_STORAGE, JSON.stringify(objeto_contacto));
+    
+    localStorage.setItem(KEY_STORAGE, JSON.stringify(objeto_login));
+    
     var storage = localStorage.getItem(KEY_STORAGE);
     console.log(JSON.parse(storage));
 
-    alert("Mensaje guardado con exitoo");
+    alert("Inicio de sesión guardado con éxito");
 }

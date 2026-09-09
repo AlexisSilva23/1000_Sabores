@@ -9,12 +9,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Pacifico&display=swap"
-        rel="stylesheet">
+    rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="../global.css">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="../iniciar_sesion/login.css">
     <title>Iniciar Sesión - Mil Sabores</title>
 
 </head>
@@ -54,12 +54,21 @@
                                 <span class="badge bg-success" id="carrito-contador">0</span>
                             </a>
                         </li>
-                        <!-- <li class="nav-item ms-3">
-                        <a class="nav-link fw-bold text-dark" href="../iniciar_sesion/login.html">Iniciar Sesión</a>
+<<<<<<< HEAD
+                        <li class="nav-item ms-3">
+                            <a class="nav-link fw-bold text-dark" href="../iniciar_sesion/login.html">Iniciar Sesión</a>
+                        </li>
+                        <li class="nav-item d-none d-sm-block">
+                            <span class="nav-link text-muted">|</span>
+                        </li>
+=======
+                    <li class="nav-item ms-3">
+                    <a class="nav-link fw-bold text-dark" href="../iniciar_sesion/login.html">Iniciar Sesión</a>
                     </li>
                     <li class="nav-item d-none d-sm-block">
                         <span class="nav-link text-muted">|</span>
-                    </li> -->
+                    </li> 
+>>>>>>> 07f5e3f62fa29a329c52139fbc1843ae5273b944
                         <li class="nav-item">
                             <a class="nav-link fw-bold text-dark"
                                 href="../registro_usuario/registro.html">Registrarse</a>
@@ -79,17 +88,27 @@
                         <h2 class="Titulo_formulario text-center mb-4">PASTELERIA MIL SABORES</h2>
                         <form>
                             <div class="mb-3">
-                                <label for="nombreUsuario" class="form_label">Nombre completo</label>
-                                <input type="text" class="form-control" id="nombreUsuario"
-                                    placeholder="Ej: Pedrito Montana" required>
+<<<<<<< HEAD
+                                <label id="lblCorreo" class="form_label">Correo electronico</label>
+                                <input id="correo" class="form-control" type="text"
+                                    placeholder="Ej: Pedritoclavounclavito@duocuc.cl">
                             </div>
                             <div class="mb-3">
-                                <label for="emailUsuario" class="form-label">Correo electronico</label>
-                                <input type="email" class="form-control" id="emailUsuario"
-                                    placeholder="nombre@ejemplo.com" required>
+                                <label id="lblPassword" class="form-label">Contraseña</label>
+                                <input id="password" class="form-control" type="text" placeholder="Ej: 123456789">
+=======
+                                <label for="CorreoUsuario" class="form_label">Correo Electronico</label>
+                                <input type="text" class="form-control" id="CorreoUsuario"
+                                    placeholder="Ingrese su Correo" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="ContraseñaUsuario" class="form-label">Contraseña</label>
+                                <input type="email" class="form-control" id="ContraseñaUsuario"
+                                    placeholder="Ingrese su clave" required>
+>>>>>>> 07f5e3f62fa29a329c52139fbc1843ae5273b944
                                 <br>
                                 <div class="d-grid">
-                                    <button class="btn btn-dark btn-lg" type="submit">INICIAR SESION</button>
+                                    <button onclick="login()" class="btn btn-dark btn-lg" type="submit">INICIAR SESION</button>
                                 </div>
                         </form>
                     </div>
@@ -98,6 +117,11 @@
         </div>
         </div>
     </main>
+
+    <footer></footer>
+
+    <script src="../iniciar_sesion/login.js"></script>
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

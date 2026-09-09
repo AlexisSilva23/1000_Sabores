@@ -1,4 +1,4 @@
-const KEY_STORAGE = "clave_storage";
+const KEY_STORAGE = "registro_storage";
 
 function guardar(){
     var nombre = document.getElementById("nombre").value;
@@ -13,7 +13,7 @@ function guardar(){
     console.log (password);
     var region = document.getElementById("region").value;
     console.log (region);
-    var comuna = document.getElementById("region").value;
+    var comuna = document.getElementById("comuna").value;
     console.log (comuna);
 
     if(nombre == "") {
@@ -55,4 +55,6 @@ function guardar(){
 
     var storage = localStorage.getItem(KEY_STORAGE);
     console.log(JSON.parse(storage));
+
+    alert("Registro guardado con éxito");
 }
