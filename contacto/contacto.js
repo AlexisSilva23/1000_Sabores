@@ -4,7 +4,7 @@ function enviarMensaje() {
     var nombre = document.getElementById("nombrecompleto").value;
     console.log(nombre);
     var correo = document.getElementById("correo").value;
-    console.log(correome);
+    console.log(correo);
     var textoMensaje = document.getElementById("mensaje").value;
     console.log(textoMensaje);
 
