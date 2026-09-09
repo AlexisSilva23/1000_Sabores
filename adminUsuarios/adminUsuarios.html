@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="homeAdministrador.css">
+    <title>Panel de ADMINISTRADOR</title>
+</head>
+<body>  
+
+<div class="container-fluid min-vh-100 marco_principal p-0">
+  <div class="row no-gutters min-vh-100">
+
+    <!-- Menú Lateral Izquierdo -->
+    <div class="col-md-3 col-lg-2 linea_vertical_menu bg-white p-3 d-flex flex-column justify-content-between">
+      <div>
+        <div class="h5 font-weight-bold mb-0">Mil Sabores</div>
+        <hr class="linea-menu">
+        <div class="nav flex-column nav-pills">
+          <a class="nav-link text-dark" href="../Home-Administrador/homeAdministrador.html">Dashboard</a>
+          <a class="nav-link active" href="../adminUsuarios/adminUsuarios.html">Pedidos</a>
+          <a class="nav-link text-dark" href="#">Inventario</a>
+          <a class="nav-link text-dark" href="#">Reportes</a>
+          <a class="nav-link text-dark" href="#">Empleados</a>
+          <a class="nav-link text-dark" href="#">Clientes</a>
+        </div>
+      </div>
+
+      <div>
+        <hr class="linea-menu">
+        <div class="nav flex-column nav-pills">
+          <a class="nav-link text-dark py-1" href="#">Configuración</a>
+          <a class="nav-link text-dark py-1" href="#">Perfil</a>
+          <a class="nav-link text-dark py-1" href="#">Search</a>
+          <a class="nav-link text-dark py-1" href="#">Ayuda</a>
+        </div>
+        <hr class="linea-menu">
+        <div class="font-weight-bold small text-dark pl-2">Perfil</div>
+      </div>
+    </div>
+
+    <!-- Panel Principal Derecho -->
+    <div class="col-md-9 col-lg-10 d-flex flex-column p-0 bg-light">
+
+      <!-- Encabezado con Botón y Notificación -->
+      <div class="p-4 llinea_horizontal_panel bg-white">
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="d-flex align-items-center">
+            <h1 class="h3 font-weight-bold mb-0 mr-3">PEDIDOS</h1>
+            <button class="btn btn-dark btn-sm rounded-0 font-weight-bold">NUEVO PEDIDO</button>
+          </div>
+          <span class="h4 mb-0">🔔</span>
+        </div>
+      </div>
+
+      <!-- Contenido Principal: Tabla Adaptada -->
+      <div class="p-4 flex-fill d-flex flex-column justify-content-between">
+        <div>
+          <!-- Filtro -->
+          <div class="mb-3">
+            <a href="#" class="text-dark font-weight-bold text-decoration-none dropdown-toggle small">Todos los Pedidos</a>
+          </div>
+
+          <!-- Tabla Enmarcada -->
+          <div class="table-responsive border border-dark bg-white">
+            <table class="table table-sm table-striped mb-0 text-center">
+              <thead class="thead-light border-bottom border-dark">
+                <tr>
+                  <th scope="col" class="border-right border-dark py-2">ID Pedido ↕</th>
+                  <th scope="col" class="border-right border-dark py-2">Pastel / Producto ↕</th>
+                  <th scope="col" class="border-right border-dark py-2">Cliente ↕</th>
+                  <th scope="col" class="border-right border-dark py-2">Estado ↕</th>
+                  <th scope="col" class="py-2">Monto ↕</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="border-right border-dark">#PED-1001</td>
+                  <td class="border-right border-dark">Torta Mil Hojas Manjar</td>
+                  <td class="border-right border-dark">Acme Corporation</td>
+                  <td class="border-right border-dark">Entregado</td>
+                  <td>$25.000</td>
+                </tr>
+                <tr>
+                  <td class="border-right border-dark">#PED-1002</td>
+                  <td class="border-right border-dark">Pastel Tres Leches</td>
+                  <td class="border-right border-dark">Bravo Solutions</td>
+                  <td class="border-right border-dark">Pendiente</td>
+                  <td>$18.000</td>
+                </tr>
+                <tr>
+                  <td class="border-right border-dark">#PED-1003</td>
+                  <td class="border-right border-dark">Cheesecake Frutilla</td>
+                  <td class="border-right border-dark">Charlie's Workshop</td>
+                  <td class="border-right border-dark">Cancelado</td>
+                  <td>$15.000</td>
+                </tr>
+                <tr>
+                  <td class="border-right border-dark">#PED-1004</td>
+                  <td class="border-right border-dark">Torta Chocoflan</td>
+                  <td class="border-right border-dark">Delta Retail</td>
+                  <td class="border-right border-dark">En Preparación</td>
+                  <td>$22.000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Paginación -->
+        <nav class="mt-4">
+          <ul class="pagination pagination-sm justify-content-center mb-0">
+            <li class="page-item"><a class="page-link text-dark border-dark rounded-0" href="#">«</a></li>
+            <li class="page-item"><a class="page-link text-dark border-dark rounded-0" href="#">‹</a></li>
+            <li class="page-item active"><a class="page-link bg-primary text-white border-dark rounded-0" href="#">1</a></li>
+            <li class="page-item"><a class="page-link text-dark border-dark rounded-0" href="#">2</a></li>
+            <li class="page-item"><a class="page-link text-dark border-dark rounded-0" href="#">3</a></li>
+            <li class="page-item"><a class="page-link text-dark border-dark rounded-0" href="#">›</a></li>
+            <li class="page-item"><a class="page-link text-dark border-dark rounded-0" href="#">»</a></li>
+          </ul>
+        </nav>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+</body>
+
+</html>

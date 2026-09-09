@@ -1,0 +1,36 @@
+/* Marco exterior completo del dashboard */
+.marco_principal {
+  border: 2px solid #000;
+  box-sizing: border-box;
+}
+
+/* Divisoria vertical que separa el menú lateral del contenido */
+.linea_vertical_menu {
+  border-right: 1px solid #000;
+}
+
+/* Divisoria horizontal del encabezado de la derecha */
+.llinea_horizontal_panel {
+  border-bottom: 1px solid #000;
+}
+
+/* Líneas separadoras dentro del menú lateral */
+.linea-menu {
+  border: 0;
+  border-top: 1px solid #000;
+  margin: 12px 0;
+  opacity: 1;
+}
+
+/* Ajustes para la tabla y bordes de celdas */
+.table thead th,
+.table tbody td {
+  vertical-align: middle;
+  border-color: #000;
+}
+
+/* Botón activo del menú lateral */
+.nav-pills .nav-link.active {
+  background-color: #0d6efd;
+  font-weight: 600;
+}
