@@ -1,10 +1,12 @@
+console.log("Contactos");
+
 const KEY_STORAGE_CONTACTO = "contacto_storage";
 
 function enviarMensaje() {
     var nombre = document.getElementById("nombrecompleto").value;
     console.log(nombre);
     var correo = document.getElementById("correo").value;
-    console.log(correome);
+    console.log(correo);
     var textoMensaje = document.getElementById("mensaje").value;
     console.log(textoMensaje);
 
