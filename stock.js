@@ -1,4 +1,4 @@
-console.log("Holaa");
+console.log("Stock funcionando");
 
 const productos = [
     {

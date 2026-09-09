@@ -12,7 +12,7 @@ mostrarProductos.forEach(function(producto) {
         <div class="card-body">
           <h5 class="card-title">${producto.nombre}</h5>
           <p class="card-text">$${producto.precio.toLocaleString()}</p>
-          <a href="../detalle_productos/detalle_productos.html?codigo=${producto.codigo}" class="btn btn-outline-success">Ver Productos</a>
+          <a href="../detalle_productos/detalle_productos.html?codigo=${producto.codigo}" class="btn btn-outline-success">Ver Producto</a>
         </div>
       </div>
     </div>

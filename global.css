@@ -47,6 +47,12 @@ h1, h2, h3, h4, h5, .card-title {
   border: none;
 }
 
+.btn-dark:hover {
+    background-color: var(--color-chocolate);
+    border-color: var(--color-chocolate);
+    color: white;
+}
+
 .navbar {
   background-color: #F5E6D3;  
   box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
