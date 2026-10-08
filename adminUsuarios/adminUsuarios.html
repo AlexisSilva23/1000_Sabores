@@ -43,88 +43,118 @@
     
     <div class="col-md-9 col-lg-10 d-flex flex-column p-0 bg-light">
 
-     
-      <div class="p-4 llinea_horizontal_panel bg-white">
-        <div class="d-flex justify-content-between align-items-center">
-          <div class="d-flex align-items-center">
-            <h1 class="h3 font-weight-bold mb-0 mr-3">PEDIDOS</h1>
-            <button class="btn btn-dark btn-sm rounded-0 font-weight-bold">NUEVO PEDIDO</button>
-          </div>
-          <span class="h4 mb-0">🔔</span>
-        </div>
+  <div class="p-4 llinea_horizontal_panel bg-white">
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center">
+        <h1 class="h3 font-weight-bold mb-0 mr-3">PEDIDOS</h1>
+        <button class="btn btn-dark btn-sm rounded-0 font-weight-bold">NUEVO PEDIDO</button>
       </div>
+      <span class="h4 mb-0">🔔</span>
+    </div>
+  </div>
 
+  <div class="p-4 flex-fill d-flex flex-column justify-content-between">
+    <div>
       
-      <div class="p-4 flex-fill d-flex flex-column justify-content-between">
-        <div>
-          
-          <div class="mb-3">
-            <a href="#" class="text-dark font-weight-bold text-decoration-none dropdown-toggle small">Todos los Pedidos</a>
-          </div>
-
-          
-          <div class="table-responsive border border-dark bg-white">
-            <table class="table table-sm table-striped mb-0 text-center">
-              <thead class="thead-light border-bottom border-dark">
-                <tr>
-                  <th scope="col" class="border-right border-dark py-2">ID Pedido ↕</th>
-                  <th scope="col" class="border-right border-dark py-2">Pastel / Producto ↕</th>
-                  <th scope="col" class="border-right border-dark py-2">Cliente ↕</th>
-                  <th scope="col" class="border-right border-dark py-2">Estado ↕</th>
-                  <th scope="col" class="py-2">Monto ↕</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="border-right border-dark">#PED-1001</td>
-                  <td class="border-right border-dark">Torta Mil Hojas Manjar</td>
-                  <td class="border-right border-dark">Acme Corporation</td>
-                  <td class="border-right border-dark">Entregado</td>
-                  <td>$25.000</td>
-                </tr>
-                <tr>
-                  <td class="border-right border-dark">#PED-1002</td>
-                  <td class="border-right border-dark">Pastel Tres Leches</td>
-                  <td class="border-right border-dark">Bravo Solutions</td>
-                  <td class="border-right border-dark">Pendiente</td>
-                  <td>$18.000</td>
-                </tr>
-                <tr>
-                  <td class="border-right border-dark">#PED-1003</td>
-                  <td class="border-right border-dark">Cheesecake Frutilla</td>
-                  <td class="border-right border-dark">Charlie's Workshop</td>
-                  <td class="border-right border-dark">Cancelado</td>
-                  <td>$15.000</td>
-                </tr>
-                <tr>
-                  <td class="border-right border-dark">#PED-1004</td>
-                  <td class="border-right border-dark">Torta Chocoflan</td>
-                  <td class="border-right border-dark">Delta Retail</td>
-                  <td class="border-right border-dark">En Preparación</td>
-                  <td>$22.000</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-       
-        <nav class="mt-4">
-          <ul class="pagination pagination-sm justify-content-center mb-0">
-            <li class="page-item"><a class="page-link text-dark border-dark rounded-0" href="#">«</a></li>
-            <li class="page-item"><a class="page-link text-dark border-dark rounded-0" href="#">‹</a></li>
-            <li class="page-item active"><a class="page-link bg-primary text-white border-dark rounded-0" href="#">1</a></li>
-            <li class="page-item"><a class="page-link text-dark border-dark rounded-0" href="#">2</a></li>
-            <li class="page-item"><a class="page-link text-dark border-dark rounded-0" href="#">3</a></li>
-            <li class="page-item"><a class="page-link text-dark border-dark rounded-0" href="#">›</a></li>
-            <li class="page-item"><a class="page-link text-dark border-dark rounded-0" href="#">»</a></li>
-          </ul>
-        </nav>
+      <div class="mb-3">
+      <a href="#" class="text-dark font-weight-bold text-decoration-none dropdown-toggle small">Todos los Pedidos</a>
       </div>
 
+      <div class="table-responsive border border-dark bg-white">
+      <table class="table table-sm table-striped mb-0 text-center align-middle">
+        <thead class="thead-light border-bottom border-dark">
+          <tr>
+            <th scope="col" class="border-right border-dark py-2">ID Pedido ↕</th>
+            <th scope="col" class="border-right border-dark py-2">Cód. Producto ↕</th>
+            <th scope="col" class="border-right border-dark py-2">Pastel / Producto ↕</th>
+            <th scope="col" class="border-right border-dark py-2">Cliente ↕</th>
+            <th scope="col" class="border-right border-dark py-2">Estado ↕</th>
+            <th scope="col" class="py-2">Monto ↕</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border-right border-dark">#PED-1001</td>
+              <td class="border-right border-dark"><code>TC001</code></td>
+              <td class="border-right border-dark">Torta Cuadrada de Chocolate</td>
+              <td class="border-right border-dark">María González</td>
+              <td class="border-right border-dark">Entregado</td>
+              <td>$45.000</td>
+            </tr>
+            <tr>
+              <td class="border-right border-dark">#PED-1002</td>
+              <td class="border-right border-dark"><code>TT002</code></td>
+              <td class="border-right border-dark">Torta Circular de Manjar</td>
+              <td class="border-right border-dark">Carlos Pérez</td>
+              <td class="border-right border-dark">Pendiente</td>
+              <td>$42.000</td>
+            </tr>
+            <tr>
+            <td class="border-right border-dark">#PED-1003</td>
+            <td class="border-right border-dark"><code>PI001</code></td>
+            <td class="border-right border-dark">Mousse de Chocolate</td>
+            <td class="border-right border-dark">Andrea Silva</td>
+            <td class="border-right border-dark">Cancelado</td>
+            <td>$5.000</td>
+            </tr>
+            <tr>
+              <td class="border-right border-dark">#PED-1004</td>
+              <td class="border-right border-dark"><code>PSA001</code></td>
+              <td class="border-right border-dark">Torta sin azúcar de Naranja</td>
+              <td class="border-right border-dark">Juan Morales</td>
+              <td class="border-right border-dark">En Preparación</td>
+              <td>$48.000</td>
+            </tr>
+            <tr>
+              <td class="border-right border-dark">#PED-1005</td>
+              <td class="border-right border-dark"><code>TC002</code></td>
+              <td class="border-right border-dark">Torta Cuadrada de Frutas</td>
+              <td class="border-right border-dark">Camila Tapia</td>
+              <td class="border-right border-dark">Entregado</td>
+              <td>$50.000</td>
+            </tr>
+            <tr>
+              <td class="border-right border-dark">#PED-1006</td>
+              <td class="border-right border-dark"><code>TT001</code></td>
+              <td class="border-right border-dark">Torta Circular de Vainilla</td>
+              <td class="border-right border-dark">Roberto Arenas</td>
+              <td class="border-right border-dark">Pendiente</td>
+              <td>$40.000</td>
+            </tr>
+            <tr>
+              <td class="border-right border-dark">#PED-1007</td>
+              <td class="border-right border-dark"><code>PI002</code></td>
+              <td class="border-right border-dark">Tiramisu Clasico</td>
+              <td class="border-right border-dark">Valentina Castro</td>
+              <td class="border-right border-dark">En Preparación</td>
+              <td>$5.500</td>
+            </tr>
+            <tr>
+            <td class="border-right border-dark">#PED-1008</td>
+            <td class="border-right border-dark"><code>PT001</code></td>
+           <td class="border-right border-dark">Empanada de Manzana</td>
+          <td class="border-right border-dark">Diego Rojas</td>
+           <td class="border-right border-dark">Entregado</td>
+           <td>$3.000</td>
+        </tr>
+         </tbody>
+        </table>
+      </div>
     </div>
 
+    <nav class="mt-4">
+      <ul class="pagination pagination-sm justify-content-center mb-0">
+       <li class="page-item"><a class="page-link text-dark border-dark rounded-0" href="#">«</a></li>
+      <li class="page-item"><a class="page-link text-dark border-dark rounded-0" href="#">‹</a></li>
+       <li class="page-item active"><a class="page-link bg-primary text-white border-dark rounded-0" href="#">1</a></li>
+      <li class="page-item"><a class="page-link text-dark border-dark rounded-0" href="#">2</a></li>
+        <li class="page-item"><a class="page-link text-dark border-dark rounded-0" href="#">3</a></li>
+        <li class="page-item"><a class="page-link text-dark border-dark rounded-0" href="#">›</a></li>
+        <li class="page-item"><a class="page-link text-dark border-dark rounded-0" href="#">»</a></li>
+      </ul>
+    </nav>
   </div>
+
 </div>
 
 </body>
