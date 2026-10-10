@@ -1,0 +1,31 @@
+.redesSociales {
+  display: flex;
+  gap: 16px;
+}
+
+.redesSociales a {
+  color: white;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.redesSociales a:hover {
+  color: #682b13bb;
+  transform: scale(1.15);
+}
+
+.botonesFooter {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-start;
+}
+
+.botonesFooter hover {
+  transform: scale(1.05);
+  transition: transform 0.2s;
+}
+
+@media (min-width: 768px) {
+  .botonesFooter {
+    justify-content: flex-end;
+  }
+}
