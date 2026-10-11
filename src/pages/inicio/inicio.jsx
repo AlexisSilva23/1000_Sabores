@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Inicio() {
   return (
     <>
@@ -17,8 +19,8 @@ function Inicio() {
                     Descubre una amplia variedad de productos de alta calidad y sabores únicos.
                     Nuestra Tienda Online posee una extensa variedad de productos que seguramente seran de su agrado.
                   </p>
-                  <a href="../productos/productos.jsx" className="btn btn-outline-primary">Ver Productos</a>
-                  <a href="../nosotros/nosotros.jsx" className="btn btn-outline-primary">Sobre nosotros</a>
+                  <Link to="/productos" className="btn btn-outline-primary">Ver Productos</Link>
+                  <Link to="/nosotros" className="btn btn-outline-primary">Sobre nosotros</Link>
                 </div>
               </div>
 
