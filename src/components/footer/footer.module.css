@@ -1,27 +1,43 @@
+.footer {
+  background-color: var(--color-superficie);
+  border-top: 2px solid var(--color-acento);
+  padding: 30px 0;
+  margin-top: 50px;
+}
+
+.titulo {
+  font-family: 'Pacifico', cursive;
+  font-size: 20px;
+  color: var(--color-marron-oscuro);
+  margin-bottom: 15px;
+}
+
 .redesSociales {
   display: flex;
-  gap: 16px;
+  gap: 15px;
 }
 
 .redesSociales a {
-  color: white;
+  color: var(--color-chocolate);
   transition: color 0.2s, transform 0.2s;
 }
 
 .redesSociales a:hover {
-  color: #682b13bb;
-  transform: scale(1.15);
+  color: var(--color-acento-oscuro);
 }
 
 .botonesFooter {
   display: flex;
-  gap: 12px;
+  gap: 10px;
   justify-content: flex-start;
 }
 
-.botonesFooter hover {
-  transform: scale(1.05);
-  transition: transform 0.2s;
+.copyright {
+  text-align: center;
+  border-top: 1px solid var(--color-borde);
+  padding-top: 15px;
+  margin: 24px 0 0;
+  font-size: 14px;
 }
 
 @media (min-width: 768px) {

@@ -2,11 +2,11 @@ import { Link, NavLink } from "react-router-dom";
 import estilos from "./navbar.module.css";
 
 function Navbar() {
-  const link = ({ isActive }) => "nav-link" + (isActive ? " active" : "");
+  const link = ({ isActive }) => `nav-link ${estilos.enlace} ${isActive ? estilos.activo : ""}`;
 
   return (
     <header>
-      <nav className="navbar navbar-expand-sm miClase">
+      <nav className={`navbar navbar-expand-sm ${estilos.navbar}`}>
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
             <img src="/img/logo.png" alt="Mil Sabores" className={estilos.logo} />

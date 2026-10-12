@@ -1,4 +1,41 @@
-.logo{
-    width: 100px;
-    height: auto;
+.navbar {
+  background-color: var(--color-superficie);   /* antes #F5E6D3 */
+  border-bottom: 2px solid var(--color-acento); /* antes rosa */
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+}
+
+.enlace {
+  color: #6b3f26;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.enlace:hover {
+  background-color: #e9d5c3;
+  color: #4a2a17;
+}
+
+.activo {
+  background-color: #6b3f26;
+  color: #fff;
+}
+
+.activo:hover {
+  background-color: #6b3f26;
+  color: #fff;
+}
+
+.nav-link:hover {
+  color: var(--color-acento-oscuro) !important; /* antes rosa */
+}
+
+.badge {
+  background-color: var(--color-durazno) !important;
+  color: var(--color-marron-oscuro);
 }
