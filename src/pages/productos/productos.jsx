@@ -2,7 +2,7 @@ import {productos } from "../../data/stockProductos";
 import TarjetaProducto from "../../components/tarjeta-producto/tarjetaProducto";
 
 function Productos() {
-    const mostrarProductos = productos.slice(0, 8);
+    const mostrarProductos = productos.slice(0, 16);
 
         return (
             <>

@@ -22,14 +22,18 @@ function Navbar() {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
+
           <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
             <ul className="navbar-nav align-items-center">
               <li className="nav-item"><NavLink className={link} to="/">Inicio</NavLink></li>
               <li className="nav-item"><NavLink className={link} to="/productos">Productos</NavLink></li>
               <li className="nav-item"><NavLink className={link} to="/nosotros">Nosotros</NavLink></li>
               <li className="nav-item"><NavLink className={link} to="/blogs">Blog</NavLink></li>
+              <li className="nav-itel"><NavLink className={link} to="/carrito">Carrito</NavLink></li>
             </ul>
           </div>
+
+          
         </div>
       </nav>
     </header>
