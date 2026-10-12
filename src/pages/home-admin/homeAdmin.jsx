@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import './homeAdministrador.css';
+import './homeAdmin.module.css';
 
-function HomeAdministrador() {
+function HomeAdmin() {
   useEffect(() => {
     document.title = 'Panel de ADMINISTRADOR';
     console.log('Panel de administración cargado correctamente.');
@@ -56,4 +56,4 @@ function HomeAdministrador() {
   );
 }
 
-export default HomeAdministrador;
+export default HomeAdmin;
