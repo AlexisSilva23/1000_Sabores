@@ -35,13 +35,6 @@ function UsuariosAdmin() {
 
           <div>
             <hr className="linea-menu" />
-            <div className="nav flex-column nav-pills">
-              <a className="nav-link text-dark py-1" href="#">Configuración</a>
-              <a className="nav-link text-dark py-1" href="#">Perfil</a>
-              <a className="nav-link text-dark py-1" href="#">Search</a>
-              <a className="nav-link text-dark py-1" href="#">Ayuda</a>
-            </div>
-            <hr className="linea-menu" />
             <div className="font-weight-bold small text-dark pl-2">Perfil</div>
           </div>
         </div>

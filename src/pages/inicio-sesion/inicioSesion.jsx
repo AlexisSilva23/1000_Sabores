@@ -4,6 +4,8 @@ import Navbar from '../../components/navbar/navbar';
 import './inicioSesion.module.css';
 
 const KEY_STORAGE = 'login_storage';
+const ADMIN_USUARIO = 'admin';
+const ADMIN_PASSWORD = 'admin1998';
 
 function InicioSesion() {
   const [correo, setCorreo] = useState('');
@@ -13,9 +15,6 @@ function InicioSesion() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log(correo);
-    console.log(password);
-
     if (correo === '') {
       alert('El Correo no puede estar vacio');
       return;
@@ -24,19 +23,13 @@ function InicioSesion() {
       return;
     }
 
-    const objeto_login = [
-      {
-        correo: correo,
-        password: password,
-      },
-    ];
+    if (correo !== ADMIN_USUARIO || password !== ADMIN_PASSWORD) {
+      alert('Usuario o contraseña incorrectos');
+      return;
+    }
 
-    localStorage.setItem(KEY_STORAGE, JSON.stringify(objeto_login));
+    localStorage.setItem(KEY_STORAGE, JSON.stringify({ correo: correo, admin: true }));
 
-    const storage = localStorage.getItem(KEY_STORAGE);
-    console.log(JSON.parse(storage));
-
-    alert('Inicio de sesión guardado con éxito');
     navigate('/home-admin');
   };
 
@@ -74,7 +67,7 @@ function InicioSesion() {
                     <input
                       id="password"
                       className="form-control"
-                      type="text"
+                      type="password"
                       placeholder="Ej: 123456789"
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
