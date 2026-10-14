@@ -41,8 +41,8 @@ function InicioSesion() {
         <div className="row justify-content-center">
           <div className="col-md-8">
             <div className="card shadow-sm">
-              <div className="card-body p-4">
-                <img src="/img/logo.png" alt="Logo" className="logo_img" />
+              <div className="card-body p-4 mb-4">
+                <img src="/img/logo.png" alt="Logo" className="logo_img d-block mx-auto mb-3" />
                 <h2 className="Titulo_formulario text-center mb-4">PASTELERIA MIL SABORES</h2>
 
                 <form onSubmit={handleSubmit}>

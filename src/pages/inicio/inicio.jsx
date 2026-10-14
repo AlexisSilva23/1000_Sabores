@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { productos } from "../../data/stockProductos";
 import TarjetaProducto from "../../components/tarjeta-producto/tarjetaProducto";
-import { Button, Card } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 
 function Inicio() {
   const mostrarProductos = productos.slice(0, 4)
