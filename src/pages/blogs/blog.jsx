@@ -14,16 +14,13 @@ function Blog() {
                         <div className="col-lg-7 mb-4 mb-lg-0">
                             <span className="badge mb-2">BLOG #1</span>
                             <h2 className="mb-3">Nuestra historia</h2>
-
                             <p className="text-muted">
                                 Bienvenidos al blog de <strong>Pastelería Mil Sabores</strong>. En este espacio queremos compartir detalles de nuestra historia, cómo se generó todo y qué nos motivó a trabajar en serio con los pasteles.
                             </p>
                             <hr />
-
                             <p className="fw-bold text-dark">
                                 Descubre cómo un pequeño cuaderno de recetas familiares se transformó en la pastelería favorita de tu barrio.
                             </p>
-
                             <p>
                                 Nuestra historia no abarca tanto tiempo, pero es inspiradora al ver cómo todo se transformó tan rápido en una pastelería de renombre. Como ya se sabe, somos 3 dueños, y todo comenzó con la motivación de hacer realidad lo que escribíamos en nuestros cuadernos, presentando nuestros productos solamente a conocidos.
                             </p>
@@ -34,17 +31,14 @@ function Blog() {
                                 Ahora con esta página buscamos llegar a más gente para poder contentarlos cada día. Estamos muy agradecidos con quienes nos apoyan; sepan que todo lo que hacemos es con cariño.
                             </p>
                         </div>
-
                         <div className="col-lg-5 text-center">
                             <img src="/img/pastel.felipe.tres.jpg" className="img-fluid shadow" alt="Historia de Mil Sabores" />
                         </div>
                     </div>
                 </div>
             </article>
-
             <article className="card shadow-sm mb-5">
                 <div className="card-body p-4 p-md-5">
-
                     <div className="text-center mb-5">
                         <span className="badge mb-2">BLOG #2</span>
                         <h2>Curiosidades de nuestros clientes</h2>
@@ -52,7 +46,6 @@ function Blog() {
                             Aquí te contaremos curiosidades dando un enfoque a las preguntas generales que nos hacen en el día a día. Queremos darles el gusto de responderlas, ya que nos sentimos eternamente agradecidos.
                         </p>
                     </div>
-
                     <div className="row mb-5 align-items-center">
                         <div className="col-md-8 order-2 order-md-1 mt-3 mt-md-0">
                             <h4>
@@ -63,12 +56,10 @@ function Blog() {
                             </p>
                         </div>
                         <div className="col-md-4 order-1 order-md-2 text-center">
-                            <img src="/img/pastel.felipe.jpg" className="img-fluid shadow-sm" style={{maxHeight: '300px'}} alt="Pastel casero" />
+                            <img src="/img/pastel.felipe.jpg" className="img-fluid shadow-sm" style={{ maxHeight: '300px' }} alt="Pastel casero" />
                         </div>
                     </div>
-
                     <hr className="mb-5" />
-
                     <div className="row align-items-center">
                         <div className="col-md-4 text-center mb-3 mb-md-0">
                             <img src="/img/pastel.felipe.dos.jpg" className="img-fluid shadow-sm" alt="Pastel Guinness" />
@@ -83,11 +74,10 @@ function Blog() {
                             </p>
                         </div>
                     </div>
-
-                </div>   
+                </div>
             </article>
         </main>
-        
+
     );
 }
 
