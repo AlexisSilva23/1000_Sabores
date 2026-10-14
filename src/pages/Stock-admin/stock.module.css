@@ -66,7 +66,7 @@
   color: var(--color-marron-oscuro);
 }
 
-/* Barra de progreso: el color depende del nivel de stock */
+
 .barra {
   width: 100%;
   height: 10px;
