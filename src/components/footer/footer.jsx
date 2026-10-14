@@ -33,6 +33,8 @@ function Footer() {
               <Link to="/inicio-sesion" className="btn btn-outline-success">Iniciar Sesión</Link>
               <Link to="/registro-usuario" className="btn btn-outline-success">Registrarse</Link>
             </div>
+            <hr/>
+            <p>Si eres estudiante de DuocUC disfruta una torta gratis por tu cumpleaños!!!</p>
           </div>
         </div>
 

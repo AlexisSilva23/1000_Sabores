@@ -62,7 +62,7 @@ function Contacto() {
                                 </div>
                             </div>
                             <div className="mt-4">
-                                <button type="button" onClick={enviarMensaje} className="btn w-100 text-white" style={{ backgroundColor: '#8B4513'}}>
+                                <button type="button" onClick={enviarMensaje} className="btn w-100 text-white" >
                                     ENVIAR MENSAJE
                                 </button>
                             </div>

@@ -23,10 +23,11 @@ export const routes = createBrowserRouter([
       { path: "/", element: <Inicio /> },
       { path: "/nosotros", element: <Nosotros /> },
       { path: "/productos", element: <Productos /> }
+
     ],
   },
-      { path: "/home-admin", element: <HomeAdmin /> },
       { path: "/inicio-sesion", element: <InicioSesion /> },
       { path: "/registro-usuario", element: <RegistroUsuario /> },
+      { path: "/home-admin", element: <HomeAdmin /> },
       { path: "/users-admin", element: <UsuariosAdmin/>}
 ]);

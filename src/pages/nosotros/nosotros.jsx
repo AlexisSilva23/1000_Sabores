@@ -1,11 +1,8 @@
-import estilos from "./nosotros.module.css";
+
 
 function Nosotros() {
   return (
     <main className="container mt-5 mb-5">
-      <div className="text-center mb-5">
-        <img src="/img/logo.png" alt="Mil Sabores" className={estilos.logo} />
-      </div>
 
       <div className="row mb-5">
         <div className="col-lg-6 mb-4 mb-lg-0">
@@ -37,6 +34,20 @@ function Nosotros() {
         </div>
       </div>
 
+      <div className="row mb-5">
+        <div className="col-12">
+          <section className="card shadow-sm border-0">
+            <div className="card-body p-4 p-md-5 text-center">
+              <h2 className="mb-4">Convenio Duoc UC</h2>
+              <p className="text-muted fs-5 mb-0">
+                Por nuestro aniversario numero 50 queremos ofrecerles a los estudiantes de DuocUC el beneficio de probar nuestros productos al comprobar su fecha de cumpleaños se les dara el enorme regalo
+                  de una torta gratis para celebrar tu dia esto es en parte a el gran apoyo que se nos ah dado y que DuocUC alla querido apoyarnos en este emprendimiento.
+              </p>
+            </div>
+          </section>
+        </div>
+      </div>
+
       <section className="equipo_desarrolladores text-center mt-5 pt-4">
         <h2 className="mb-5">Equipo de Desarrolladores</h2>
         <div className="row justify-content-center">
@@ -53,7 +64,6 @@ function Nosotros() {
             </div>
           </div>
 
-          {/* Tarjeta Felipe */}
           <div className="col-md-4 mb-4">
             <div className="card shadow-sm border-0 h-100 py-4">
               <div className="card-body">
@@ -66,7 +76,6 @@ function Nosotros() {
             </div>
           </div>
 
-          {/* Tarjeta Joaquin */}
           <div className="col-md-4 mb-4">
             <div className="card shadow-sm border-0 h-100 py-4">
               <div className="card-body">

@@ -84,9 +84,10 @@ function Blog() {
                         </div>
                     </div>
 
-                </div>
+                </div>   
             </article>
         </main>
+        
     );
 }
 
