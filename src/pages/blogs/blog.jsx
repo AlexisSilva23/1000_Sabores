@@ -32,7 +32,7 @@ function Blog() {
                             </p>
                         </div>
                         <div className="col-lg-5 text-center">
-                            <img src="/img/pastel.felipe.tres.jpg" className="img-fluid shadow" alt="Historia de Mil Sabores" />
+                            <img src="\img\pastel.felipe.tres.jpg" className="img-fluid shadow" alt="Historia de Mil Sabores" />
                         </div>
                     </div>
                 </div>

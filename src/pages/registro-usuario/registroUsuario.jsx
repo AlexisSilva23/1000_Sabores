@@ -15,7 +15,6 @@ function RegistroUsuario() {
     function registrar(e) {
         e.preventDefault();
 
-        // --- 1. VALIDACIONES ---
         if (nombre.trim() === "") {
             alert("Por favor, ingrese su nombre.");
             return;
