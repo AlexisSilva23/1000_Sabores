@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Card } from "react-bootstrap";
-import { productos } from "../../data/stockProductos";
+import { useProductos } from "../../context/productosContext";
 import TarjetaProducto from "../../components/tarjeta-producto/tarjetaProducto";
 import estilos from "./inicio.module.css";
 
@@ -30,6 +30,7 @@ const secciones = [
 
 
 function Inicio() {
+  const { productos } = useProductos();
   const mostrarProductos = productos.slice(0, 4);
 
   return (

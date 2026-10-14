@@ -1,11 +1,16 @@
 import { useState } from "react";
-import { productos } from "../../data/stockProductos";
+import { useProductos } from "../../context/productosContext";
 import TarjetaProducto from "../../components/tarjeta-producto/tarjetaProducto";
 import estilos from "./productos.module.css";
 
-const categorias = [...new Set(productos.map((p) => p.categoria))];
+
 
 function Productos() {
+  const { productos } = useProductos();
+
+  const categorias = [...new Set(productos.map((p) => p.categoria))];
+
+
   const [categoria, setCategoria] = useState("Todas");
   const [precioMax, setPrecioMax] = useState("");
 

@@ -1,15 +1,15 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Cart3, CartX, ArrowLeft, ListUl, Receipt, Trash, CreditCard, X } from "react-bootstrap-icons";
-import { productos } from "../../data/stockProductos";
+import { useProductos } from "../../context/productosContext";
 import Alerta from "../../components/alert/alert";
 import { useCart } from "../../context/cartContext";
 
 function Carrito() {
+  const { productos } = useProductos();
   const { items, updateQty, removeItem, clearCart, totalItems, totalPrecio } = useCart();
   const [mensaje, setMensaje] = useState(null);
 
-  // El carrito guarda solo { codigo, cantidad }; aquí se le suman los datos del producto
   const lineas = items.map((item) => ({
     ...productos.find((p) => p.codigo === item.codigo),
     cantidad: item.cantidad,
@@ -27,10 +27,6 @@ function Carrito() {
     }
   };
 
-  const finalizar = () => {
-    clearCart();
-    setMensaje({ texto: "¡Gracias por tu compra! Pronto recibirás tu pedido.", tipo: "success" });
-  };
 
   return (
     <main className="container my-5">
@@ -105,7 +101,9 @@ function Carrito() {
                 <hr />
                 <div className="d-grid gap-2">
                   <button className="btn btn-outline-danger" onClick={vaciar}><Trash /> Vaciar Carrito</button>
-                  <button className="btn btn-chocolate" onClick={finalizar}><CreditCard /> Finalizar Compra</button>
+                  <Link to="/checkout" className="btn btn-chocolate">
+                    <CreditCard /> Finalizar compra
+                  </Link>
                 </div>
               </div>
             </div>

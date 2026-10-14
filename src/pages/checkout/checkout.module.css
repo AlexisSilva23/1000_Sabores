@@ -1,0 +1,30 @@
+.formulario {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 28px;
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-top: 4px solid var(--color-acento);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.titulo {
+  margin-bottom: 4px;
+}
+
+.seccion {
+  font-size: 1.3rem;
+  margin: 28px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--color-acento);
+}
+
+.acciones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+}

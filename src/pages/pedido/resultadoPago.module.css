@@ -1,0 +1,36 @@
+.tarjeta {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 28px;
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.tituloExito,
+.tituloError {
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+}
+
+.tituloExito { color: var(--color-acento-oscuro); }
+.tituloError { color: #b3261e; }
+
+.seccion {
+  font-size: 1.2rem;
+  margin: 20px 0 8px;
+}
+
+.dato {
+  margin: 0;
+  color: var(--color-marron-oscuro);
+}
+
+.acciones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}

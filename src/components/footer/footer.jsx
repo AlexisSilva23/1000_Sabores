@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import * as Icon from "react-bootstrap-icons";
 import estilos from "./footer.module.css";
+import { useAuth } from "../../context/authContext";
 
 function Footer() {
+  const { usuario } = useAuth();
+
   return (
     <footer className={estilos.footer}>
 
@@ -35,6 +38,15 @@ function Footer() {
             </div>
           </div>
         </div>
+
+        {!usuario && (
+          <div className="col-12 col-md-6">
+            <div className={estilos.botonesFooter}>
+              <Link to="/inicio-sesion" className="btn btn-outline-success">Iniciar Sesión</Link>
+              <Link to="/registro-usuario" className="btn btn-outline-success">Registrarse</Link>
+            </div>
+          </div>
+        )}
 
         <p className={estilos.copyright}>
           &copy; 2026 Mil Sabores. Todos los derechos reservados.

@@ -9,8 +9,9 @@ import DetalleProducto from "./pages/detalle-producto/detalleProducto";
 import InicioSesion from "./pages/inicio-sesion/inicioSesion";
 import RegistroUsuario from "./pages/registro-usuario/registroUsuario";
 import HomeAdmin from "./pages/home-admin/homeAdmin";
-import UsuariosAdmin from "./pages/users-admin/usuariosAdmin";
 import Contacto from "./pages/contacto/contacto";
+import Checkout from "./pages/checkout/checkout";
+import ResultadoPago from "./pages/pedido/resultadoPago";
 
 export const routes = createBrowserRouter([
   {
@@ -18,15 +19,17 @@ export const routes = createBrowserRouter([
     children: [
       { path: "/blogs", element: <Blog /> },
       { path: "/carrito", element: <Carrito /> },
+      { path: "/checkout", element: <Checkout/> },
       { path: "/contacto", element: <Contacto/> },
       { path: "/detalle-producto/:codigo", element: <DetalleProducto /> },
       { path: "/", element: <Inicio /> },
       { path: "/nosotros", element: <Nosotros /> },
-      { path: "/productos", element: <Productos /> }
+      { path: "/productos", element: <Productos /> },
+      { path: "/pedido/:numero", element: <ResultadoPago /> }
     ],
   },
       { path: "/home-admin", element: <HomeAdmin /> },
       { path: "/inicio-sesion", element: <InicioSesion /> },
-      { path: "/registro-usuario", element: <RegistroUsuario /> },
-      { path: "/users-admin", element: <UsuariosAdmin/>}
+      { path: "/registro-usuario", element: <RegistroUsuario /> }
+    
 ]);

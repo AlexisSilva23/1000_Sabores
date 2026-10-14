@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { productos } from "../../data/stockProductos";
+import { useProductos } from "../../context/productosContext";
 import { useCart } from "../../context/cartContext";
 import { ArrowLeft, Cart3, CartPlus } from "react-bootstrap-icons";
 import Alerta from "../../components/alert/alert";
 
 
 function DetalleProducto() {
+    const { productos } = useProductos();
     const { codigo } = useParams();
     const { addItem } = useCart();
     const [cantidad, setCantidad] = useState(1);

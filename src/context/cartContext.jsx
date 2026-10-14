@@ -1,11 +1,13 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { productos } from "../data/stockProductos";
+import { useProductos } from "./productosContext";
 
 const CartContext = createContext();
 export const useCart = () => useContext(CartContext);
 
 export function CartProvider({ children }) {
-    
+  
+  const { productos } = useProductos();
+
   const [items, setItems] = useState(() => {
     try { return JSON.parse(localStorage.getItem("carrito")) || []; }
     catch { return []; }
@@ -15,7 +17,6 @@ export function CartProvider({ children }) {
     localStorage.setItem("carrito", JSON.stringify(items));
   }, [items]);
 
-  // Devuelve { ok, error } para que la página muestre la alerta
   const addItem = (codigo, cantidad = 1) => {
     const producto = productos.find((p) => p.codigo === codigo);
     if (!producto) return { ok: false, error: "Producto no encontrado" };

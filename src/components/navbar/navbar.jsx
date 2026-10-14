@@ -1,8 +1,10 @@
 import { Link, NavLink } from "react-router-dom";
 import estilos from "./navbar.module.css";
+import { useAuth } from "../../context/authContext";
 
 function Navbar() {
   const link = ({ isActive }) => `nav-link ${estilos.enlace} ${isActive ? estilos.activo : ""}`;
+  const { usuario, logout } = useAuth();
 
   return (
     <header>
@@ -34,7 +36,20 @@ function Navbar() {
             </ul>
           </div>
 
-          
+          {usuario ? (
+            <>
+              <li className="nav-item"><span className="nav-link">Hola, {usuario.nombre}</span></li>
+              <li className="nav-item">
+                <button className={`btn nav-link ${estilos.enlace}`} onClick={logout}>Cerrar sesión</button>
+              </li>
+            </>
+          ) : (
+            <>
+              <li className="nav-item"><NavLink className={link} to="/inicio-sesion">Iniciar Sesión</NavLink></li>
+              <li className="nav-item"><NavLink className={link} to="/registro-usuario">Registrarse</NavLink></li>
+            </>
+          )}
+
         </div>
       </nav>
     </header>
