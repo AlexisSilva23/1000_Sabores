@@ -29,6 +29,7 @@ function Navbar() {
               <li className="nav-item"><NavLink className={link} to="/productos">Productos</NavLink></li>
               <li className="nav-item"><NavLink className={link} to="/nosotros">Nosotros</NavLink></li>
               <li className="nav-item"><NavLink className={link} to="/blogs">Blog</NavLink></li>
+              <li className="nav-itel"><NavLink className={link} to="/contacto">Contacto</NavLink></li>
               <li className="nav-itel"><NavLink className={link} to="/carrito">Carrito</NavLink></li>
             </ul>
           </div>

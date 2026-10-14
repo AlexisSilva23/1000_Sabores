@@ -1,0 +1,93 @@
+.stock-pagina {
+  background-color: #fff5f8;
+  min-height: 100%;
+}
+
+.stock-encabezado {
+  background-color: #6b4226;
+  color: #fff;
+  padding: 24px;
+}
+
+.stock-buscador {
+  max-width: 350px;
+  border: 2px solid #6b4226;
+  border-radius: 20px;
+}
+
+.stock-tarjeta {
+  background-color: #fff;
+  border: 2px solid #6b4226;
+  border-radius: 16px;
+  padding: 16px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.stock-tarjeta:hover {
+  transform: translateY(-4px);
+}
+
+.stock-emoji {
+  font-size: 40px;
+}
+
+.stock-codigo {
+  font-size: 12px;
+  color: #999;
+}
+
+.stock-nombre {
+  font-weight: 700;
+  min-height: 48px;
+  color: #6b4226;
+}
+
+.stock-barra {
+  background-color: #eee;
+  border-radius: 10px;
+  height: 10px;
+  margin: 10px 0 6px;
+  overflow: hidden;
+}
+
+.stock-barra-relleno {
+  height: 100%;
+  border-radius: 10px;
+}
+
+.stock-alto { background-color: #4caf50; }
+.stock-medio { background-color: #ffb300; }
+.stock-bajo { background-color: #e53935; }
+.stock-agotado { background-color: #999; }
+
+.stock-cantidad {
+  font-size: 15px;
+  font-weight: 600;
+  color: #6b4226;
+}
+
+.stock-tarjeta {
+  background-color: #fff;
+  border: 2px solid #6b4226;
+  border-radius: 16px;
+  padding: 16px 16px 20px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.stock-botones button {
+  width: 36px;
+  height: 36px;
+  border: 2px solid #6b4226;
+  background-color: #fff;
+  color: #6b4226;
+  border-radius: 50%;
+  font-size: 18px;
+  margin: 0 4px;
+}
+
+.stock-botones button:hover {
+  background-color: #6b4226;
+  color: #fff;
+}

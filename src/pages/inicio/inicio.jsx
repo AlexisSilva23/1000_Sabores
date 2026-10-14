@@ -28,6 +28,7 @@ const secciones = [
   },
 ];
 
+
 function Inicio() {
   const mostrarProductos = productos.slice(0, 4);
 
