@@ -1,18 +1,28 @@
 // @vitest-environment jsdom
 
-import { render } from '@testing-library/react';
-import { describe, it, expect } from 'vitest';
-import '@testing-library/jest-dom/vitest';
-import { BrowserRouter } from 'react-router-dom';
-import RegistroUsuario from './registroUsuario.jsx'; 
+import { fireEvent, render, screen } from "@testing-library/react"
+import { MemoryRouter } from "react-router-dom"
+import RegistroUsuario from "./registroUsuario.jsx"
+import { expect, test, vi } from "vitest"
 
-describe('Componente RegistroUsuario', () => {
-    it('renderiza la vista de RegistroUsuario sin errores', () => {
-        render(
-            <BrowserRouter>
-                <RegistroUsuario />
-            </BrowserRouter>
-        );
-        expect(document.body).toBeInTheDocument();
-    });
+vi.mock('../../context/authContext', () => {
+    return {
+        useAuth: () => {
+            return { usuario: null, logout: () => { } };
+        }
+    };
 });
+
+test('Probando el input de nombre en Registro', () => {
+    render(
+        <MemoryRouter>
+            <RegistroUsuario />
+        </MemoryRouter>
+    )
+
+    const inputNombre = screen.getByPlaceholderText("Ej: Pedro Antonio");
+
+    fireEvent.change(inputNombre, { target: { value: "Felipe" } });
+
+    expect(inputNombre.value).toBe("Felipe");
+})

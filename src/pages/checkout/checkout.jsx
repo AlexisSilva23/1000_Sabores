@@ -79,13 +79,13 @@ function Checkout() {
 
     if (pagoOk) {
       descontarStock(lineas);
+      pagoRealizado.current = true;
       clearCart();
     }
     navigate(`/pedido/${pedido.numero}`);
   };
 
   if (lineas.length === 0) {
-    if (pagoRealizado.current) return null;   // está navegando, no mostrar nada
     return (
       <main className="container text-center my-5">
         <h2>Tu carrito está vacío</h2>

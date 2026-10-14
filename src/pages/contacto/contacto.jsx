@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import estilo from './contacto.module.css';
 
 function Contacto() {
     const [nombre, setNombre] = useState("");
@@ -62,9 +63,9 @@ function Contacto() {
                                 </div>
                             </div>
                             <div className="mt-4">
-                                <button type="button" onClick={enviarMensaje} className="btn w-100 text-white" >
+                                <button type="button" onClick={enviarMensaje} className={`btn ${estilo.botonCafe}`}>
                                     ENVIAR MENSAJE
-                                </button>
+                                </button>   
                             </div>
                         </form>
 

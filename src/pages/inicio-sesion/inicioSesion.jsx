@@ -54,7 +54,7 @@ function InicioSesion() {
                       id="correo"
                       className="form-control"
                       type="text"
-                      placeholder="Ej: Pedritoclavounclavito@duocuc.cl"
+                      placeholder="Ej: AntonioQuinto@duocuc.cl"
                       value={correo}
                       onChange={(e) => setCorreo(e.target.value)}
                     />
