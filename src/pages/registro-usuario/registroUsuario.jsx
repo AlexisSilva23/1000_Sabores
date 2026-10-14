@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import Navbar from '../../components/navbar/navbar';
+import estilos from './registroUsuario.module.css';
 
 function RegistroUsuario() {
     const [nombre, setNombre] = useState("");
     const [apellido, setApellido] = useState("");
-    const [edad, setEdad] = useState("");
+    const [fechaNacimiento, setFechaNacimiento] = useState("");
     const [correo, setCorreo] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
@@ -24,8 +25,8 @@ function RegistroUsuario() {
             return;
         }
 
-        if (edad === "" || edad <= 0) {
-            alert("Por favor, ingrese una edad valida.");
+        if (fechaNacimiento === "") {
+            alert("Por favor, ingrese su fecha de nacimiento.");
             return;
         }
 
@@ -58,12 +59,17 @@ function RegistroUsuario() {
             alert("Por favor, seleccione una comuna.");
             return;
         }
+
+        const datosUsuario = { nombre, apellido, fechaNacimiento, correo, password, region, comuna };
         
-        console.log("Los siguentes datos fueron guardados: ", { nombre, apellido, edad, correo, password, confirmPassword, region, comuna });
+        console.log("Los siguientes datos fueron guardados: ", datosUsuario);
 
-        alert("¡Registro hecho con exito!");
+        if (correo.toLowerCase().endsWith("@duocuc.cl")) {
+            alert("¡Registro hecho con éxito! 🎉\n\nComo estudiante de Duoc UC, tienes derecho a una TORTA GRATIS en tu cumpleaños.");
+        } else {
+            alert("¡Registro hecho con éxito!");
+        }
     }
-
 
     return (
         <>
@@ -78,11 +84,11 @@ function RegistroUsuario() {
                     <div className="col-md-10">
                         <div className="card shadow-sm p-4">
 
-                            <h2 className="mb-4" style={{ fontFamily: 'Pacifico, cursive', color: '#6d4c41' }}>
+                            <h2 className="mb-4">
                                 SE PARTE DE NUESTROS SABORES
                             </h2>
 
-                            <form onSubmit={registrar}>
+                            <form>
                                 <div className="row">
                                     <div className="col-md-6 mb-3">
                                         <label htmlFor="txtNombre">Nombre:</label>
@@ -95,8 +101,8 @@ function RegistroUsuario() {
                                     </div>
 
                                     <div className="col-md-6 mb-3">
-                                        <label htmlFor="txtEdad">Edad:</label>
-                                        <input type="number" id="txtEdad" className="form-control" placeholder="Ingrese su edad" value={edad} onChange={(e) => setEdad(e.target.value)} required />
+                                        <label htmlFor="txtFechaNacimiento">Fecha de Nacimiento:</label>
+                                        <input type="date" id="txtFechaNacimiento" className="form-control" value={fechaNacimiento} onChange={(e) => setFechaNacimiento(e.target.value)} required />
                                     </div>
 
                                     <div className="col-md-6 mb-3">
@@ -132,7 +138,7 @@ function RegistroUsuario() {
                                 </div>
 
                                 <div className="mt-4">
-                                    <button type="button" onClick={registrar} className="btn text-white" style={{ backgroundColor: '#8B4513'}}>
+                                    <button type="button" onClick={registrar} className={`btn ${estilos.botonCafe}`}>
                                         REGISTRARSE
                                     </button>
                                 </div>

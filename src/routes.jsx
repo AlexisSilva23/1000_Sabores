@@ -28,7 +28,6 @@ export const routes = createBrowserRouter([
       { path: "/pedido/:numero", element: <ResultadoPago /> }
     ],
   },
-      { path: "/home-admin", element: <HomeAdmin /> },
       { path: "/inicio-sesion", element: <InicioSesion /> },
       { path: "/registro-usuario", element: <RegistroUsuario /> }
     
